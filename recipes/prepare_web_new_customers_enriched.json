@@ -1,0 +1,43 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "description": "### Process explained\n\n- __extracts the country__ of each customer knowing his IP address.", 
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "deps": [], 
+          "ref": "web_new_customers"
+        }
+      ]
+    }
+  }, 
+  "neverRecomputeExistingPartitions": false, 
+  "optionalDependencies": false, 
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "appendMode": false, 
+          "ref": "web_new_customers_enriched"
+        }
+      ]
+    }
+  }, 
+  "params": {
+    "engineType": "DSS", 
+    "hadoopConfigKeys": []
+  }, 
+  "redispatchPartitioning": false, 
+  "tags": [], 
+  "type": "shaker", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1461148473697, 
+    "versionNumber": 10
+  }
+}

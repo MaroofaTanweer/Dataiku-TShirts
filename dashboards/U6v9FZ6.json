@@ -1,0 +1,258 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486128061722, 
+    "versionNumber": 0
+  }, 
+  "listed": true, 
+  "name": "Forecasting revenue modeling and results", 
+  "owner": "admin", 
+  "pages": [
+    {
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 9, 
+              "top": 5, 
+              "width": 3
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "imageId": "dylPE7w", 
+            "insightId": "1vZnRdp", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showLegend": false, 
+              "showTooltips": true, 
+              "showXAxis": false, 
+              "showYAxis": false
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 5, 
+              "left": 6, 
+              "top": 1, 
+              "width": 3
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "jXqfxhk", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showLegend": true, 
+              "showTooltips": true, 
+              "showXAxis": false, 
+              "showYAxis": true
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Top 20 countries / predicted revenue"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 4, 
+              "left": 9, 
+              "top": 1, 
+              "width": 3
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "oCdrrMN", 
+            "insightType": "dataset_table", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showDescription": false, 
+              "showMeaning": false, 
+              "showName": true, 
+              "showProgressBar": false, 
+              "showStorageType": false
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Forecast revenue / customers"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 3, 
+              "left": 7, 
+              "top": 7, 
+              "width": 5
+            }, 
+            "clickAction": "OPEN_INSIGHT", 
+            "displayMode": "INSIGHT", 
+            "imageId": "lY4t8Pm", 
+            "insightId": "gfcKK2y", 
+            "insightType": "jupyter", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "showCode": false
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 5, 
+              "left": 0, 
+              "top": 1, 
+              "width": 4
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "6emoKaF", 
+            "insightType": "saved-model_report", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "displayMode": "variables_importance"
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Variables importances"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 8, 
+              "left": 0, 
+              "top": 6, 
+              "width": 7
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "pSt9eoa", 
+            "insightType": "saved-model_report", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "displayMode": "ensemble_summary"
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Tree Visualization"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 4, 
+              "top": 1, 
+              "width": 2
+            }, 
+            "clickAction": "OPEN_OTHER_INSIGHT", 
+            "displayMode": "INSIGHT", 
+            "insightId": "MLbiGaK", 
+            "insightType": "metrics", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "YES", 
+            "targetInsightId": "pSt9eoa", 
+            "tileParams": {
+              "displayMode": "LAST_VALUE"
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Mean Average Percentage Error"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 4, 
+              "top": 2, 
+              "width": 2
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "- The model shown here is the best of a set of models that have been created in a [visual Lab](/projects/DKU_TSHIRTS/analysis/gPd2KlKo/ml/p/60zKZeke/) \n\n- You can see in the [flow](/projects/DKU_TSHIRTS/flow/) which data it uses for training and how it is used day after day to score new customers.", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 0, 
+              "top": 0, 
+              "width": 6
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "__Revenue Forecast Prediction model (Random Forest)__\n\n\u25bc\u25bc\u25bc\u25bc\u25bc", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 6, 
+              "top": 0, 
+              "width": 6
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "__Forecasted Revenue & Insights__\n\n\n\u25bc\u25bc\u25bc\u25bc\u25bc", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 4, 
+              "top": 4, 
+              "width": 2
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "IMAGE", 
+            "imageId": "WU9yG28", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "MOUSEOVER", 
+            "tileType": "IMAGE"
+          }
+        ]
+      }, 
+      "id": "5N9PiLT", 
+      "showTitle": false, 
+      "title": "Upcoming revenue"
+    }
+  ], 
+  "showGrid": true, 
+  "tags": [], 
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486148714244, 
+    "versionNumber": 80
+  }
+}

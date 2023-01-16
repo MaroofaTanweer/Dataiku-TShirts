@@ -1,0 +1,164 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486128061735, 
+    "versionNumber": 0
+  }, 
+  "dashboardCreationId": "U6v9FZ6", 
+  "description": "", 
+  "listed": false, 
+  "name": "Top 10 countries / predicted revenue", 
+  "owner": "admin", 
+  "params": {
+    "datasetSmartName": "revenue_prediction", 
+    "def": {
+      "axis1LogScale": false, 
+      "axis2LogScale": false, 
+      "boxplotBreakdownDim": [], 
+      "boxplotValue": [], 
+      "bubblesOptions": {
+        "defaultRadius": 5.0
+      }, 
+      "colorMeasure": [], 
+      "colorOptions": {
+        "ccScaleMode": "NORMAL", 
+        "colorPalette": "default", 
+        "singleColor": "#659a88", 
+        "transparency": 0.9
+      }, 
+      "colorPaletteType": "LINEAR", 
+      "computeMode": "NORMAL", 
+      "disableSafetyLimits": false, 
+      "filters": [], 
+      "genericDimension0": [
+        {
+          "column": "ip_country", 
+          "filters": [], 
+          "generateOthersCategory": false, 
+          "isA": "dimension", 
+          "maxValues": 15, 
+          "numParams": {
+            "emptyBinsMode": "ZEROS"
+          }, 
+          "oneTickPerBin": false, 
+          "possibleSorts": [
+            {
+              "label": "Natural ordering", 
+              "sortAscending": true, 
+              "type": "NATURAL"
+            }, 
+            {
+              "label": "Sum of prediction, descending", 
+              "measureIdx": 0, 
+              "type": "AGGREGATION"
+            }, 
+            {
+              "label": "Sum of prediction, ascending", 
+              "measureIdx": 0, 
+              "sortAscending": true, 
+              "type": "AGGREGATION"
+            }
+          ], 
+          "sort": {
+            "label": "Sum of prediction, descending", 
+            "measureIdx": 0, 
+            "type": "AGGREGATION"
+          }, 
+          "type": "ALPHANUM"
+        }
+      ], 
+      "genericDimension1": [], 
+      "genericMeasures": [
+        {
+          "column": "prediction", 
+          "computeMode": "NORMAL", 
+          "computeModeDim": 1, 
+          "displayAxis": "axis1", 
+          "displayType": "column", 
+          "displayed": true, 
+          "function": "SUM", 
+          "isA": "measure", 
+          "type": "NUMERICAL"
+        }
+      ], 
+      "geometry": [], 
+      "groupDimension": [], 
+      "hexbinNumber": 20, 
+      "hexbinRadius": 20, 
+      "hexbinRadiusMode": "NUM_HEXAGONS", 
+      "includeZero": true, 
+      "mapGridOptions": {
+        "gridLatDeg": 0.6, 
+        "gridLonDeg": 0.6
+      }, 
+      "mapOptions": {
+        "lockSquareGrid": false, 
+        "tilesLayer": "mapquest-std"
+      }, 
+      "name": "Top 10 countries / predicted revenue", 
+      "pieOptions": {
+        "donutHoleSize": 50.0
+      }, 
+      "scatterOptions": {
+        "equalScales": false, 
+        "identityLine": false
+      }, 
+      "showLegend": true, 
+      "showXAxis": false, 
+      "sizeMeasure": [], 
+      "smoothing": false, 
+      "strokeWidth": 1, 
+      "tooltipMeasures": [], 
+      "type": "stacked_bars", 
+      "uaColor": [], 
+      "uaShape": [], 
+      "uaSize": [], 
+      "uaTooltip": [], 
+      "uaXDimension": [], 
+      "uaYDimension": [], 
+      "useLiveProcessingIfAvailable": true, 
+      "userEditedName": true, 
+      "variant": "normal", 
+      "xAxisMode": "NORMAL", 
+      "xDimension": [], 
+      "xMeasure": [], 
+      "yAxisMode": "NORMAL", 
+      "yDimension": [], 
+      "yMeasure": []
+    }, 
+    "engineType": "LINO", 
+    "refreshableSelection": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false, 
+      "selection": {
+        "filter": {
+          "distinct": false, 
+          "enabled": false
+        }, 
+        "latestPartitionsN": 1, 
+        "maxReadUncompressedBytes": -1, 
+        "maxRecords": 30000, 
+        "partitionSelectionMethod": "ALL", 
+        "samplingMethod": "HEAD_SEQUENTIAL", 
+        "targetRatio": 0.02, 
+        "useMemTable": false, 
+        "withinFirstN": -1
+      }
+    }
+  }, 
+  "shortDesc": "", 
+  "tags": [], 
+  "type": "chart", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486146943243, 
+    "versionNumber": 3
+  }
+}

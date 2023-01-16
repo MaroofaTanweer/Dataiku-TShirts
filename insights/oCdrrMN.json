@@ -1,0 +1,102 @@
+{
+  "type": "dataset_table",
+  "params": {
+    "datasetSmartName": "revenue_prediction",
+    "shakerScript": {
+      "steps": [],
+      "maxProcessedMemTableBytes": -1,
+      "columnsSelection": {
+        "mode": "SELECT",
+        "list": [
+          {
+            "name": "customer_id",
+            "d": true
+          },
+          {
+            "name": "ip",
+            "d": false
+          },
+          {
+            "name": "ip_country",
+            "d": true
+          },
+          {
+            "name": "ip_geopoint",
+            "d": false
+          },
+          {
+            "name": "pages_visited",
+            "d": false
+          },
+          {
+            "name": "campain",
+            "d": false
+          },
+          {
+            "name": "prediction",
+            "d": true
+          }
+        ]
+      },
+      "coloring": {
+        "scheme": "MEANING_AND_STATUS",
+        "individualColumns": [],
+        "valueColoringMode": "HASH"
+      },
+      "sorting": [],
+      "analysisColumnData": {},
+      "explorationSampling": {
+        "selection": {
+          "maxStoredBytes": -1,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "samplingMethod": "HEAD_SEQUENTIAL",
+          "maxRecords": 10000,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        },
+        "autoRefreshSample": false,
+        "_refreshTrigger": 0
+      },
+      "vizSampling": {
+        "autoRefreshSample": false,
+        "_refreshTrigger": 0
+      },
+      "exploreUIParams": {
+        "autoRefresh": true
+      },
+      "globalSearchQuery": "",
+      "explorationFilters": [],
+      "previewMode": "ALL_ROWS"
+    }
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Predicted revenue raw data",
+  "dashboardCreationId": "U6v9FZ6",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061737
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061737
+  },
+  "description": "",
+  "shortDesc": "",
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

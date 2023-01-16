@@ -1,0 +1,23 @@
+{
+    "layout": "WIKI_ARTICLE", 
+    "attachments": [], 
+    "versionTag": {
+        "lastModifiedBy": {
+            "login": "admin"
+        }, 
+        "lastModifiedOn": 1536329770075, 
+        "versionNumber": 3
+    }, 
+    "tags": [], 
+    "creationTag": {
+        "lastModifiedBy": {
+            "login": "admin"
+        }, 
+        "lastModifiedOn": 1536329720703, 
+        "versionNumber": 0
+    }, 
+    "checklists": {
+        "checklists": []
+    }, 
+    "name": "Predicting Revenue"
+}

@@ -1,0 +1,45 @@
+{
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "deps": [], 
+          "ref": "web_history"
+        }
+      ]
+    }, 
+    "scriptDeps": {
+      "items": [
+        {
+          "deps": [], 
+          "ref": "crm_history"
+        }
+      ]
+    }
+  }, 
+  "neverRecomputeExistingPartitions": false, 
+  "optionalDependencies": false, 
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "web_history_prepared"
+        }
+      ]
+    }
+  }, 
+  "params": {
+    "engineType": "DSS"
+  }, 
+  "partitionDeps": [], 
+  "tags": [], 
+  "type": "shaker", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1430749428783, 
+    "versionNumber": 3
+  }
+}

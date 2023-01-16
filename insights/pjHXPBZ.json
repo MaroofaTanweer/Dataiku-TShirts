@@ -1,0 +1,162 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486148813294, 
+    "versionNumber": 0
+  }, 
+  "dashboardCreationId": "QdCQjzW", 
+  "listed": false, 
+  "name": "Avg. of revenue by ip_country on crm_and_web_history_enriched", 
+  "owner": "admin", 
+  "params": {
+    "datasetSmartName": "crm_and_web_history_enriched", 
+    "def": {
+      "axis1LogScale": false, 
+      "axis2LogScale": false, 
+      "boxplotBreakdownDim": [], 
+      "boxplotValue": [], 
+      "bubblesOptions": {
+        "defaultRadius": 5.0
+      }, 
+      "colorMeasure": [], 
+      "colorOptions": {
+        "ccScaleMode": "NORMAL", 
+        "colorPalette": "default", 
+        "singleColor": "#659a88", 
+        "transparency": 0.75
+      }, 
+      "colorPaletteType": "LINEAR", 
+      "computeMode": "NORMAL", 
+      "disableSafetyLimits": false, 
+      "filters": [], 
+      "genericDimension0": [
+        {
+          "column": "ip_country", 
+          "filters": [], 
+          "generateOthersCategory": true, 
+          "isA": "dimension", 
+          "maxValues": 300, 
+          "numParams": {
+            "emptyBinsMode": "ZEROS"
+          }, 
+          "oneTickPerBin": false, 
+          "possibleSorts": [
+            {
+              "label": "Natural ordering", 
+              "sortAscending": true, 
+              "type": "NATURAL"
+            }, 
+            {
+              "label": "Sum of revenue, descending", 
+              "measureIdx": 0, 
+              "type": "AGGREGATION"
+            }, 
+            {
+              "label": "Sum of revenue, ascending", 
+              "measureIdx": 0, 
+              "sortAscending": true, 
+              "type": "AGGREGATION"
+            }
+          ], 
+          "sort": {
+            "label": "Natural ordering", 
+            "sortAscending": true, 
+            "type": "NATURAL"
+          }, 
+          "type": "ALPHANUM"
+        }
+      ], 
+      "genericDimension1": [], 
+      "genericMeasures": [
+        {
+          "column": "revenue", 
+          "computeMode": "NORMAL", 
+          "computeModeDim": 1, 
+          "displayAxis": "axis1", 
+          "displayType": "column", 
+          "displayed": true, 
+          "function": "SUM", 
+          "isA": "measure", 
+          "type": "NUMERICAL"
+        }
+      ], 
+      "geometry": [], 
+      "groupDimension": [], 
+      "hexbinNumber": 20, 
+      "hexbinRadius": 20, 
+      "hexbinRadiusMode": "NUM_HEXAGONS", 
+      "includeZero": true, 
+      "mapGridOptions": {
+        "gridLatDeg": 0.6, 
+        "gridLonDeg": 0.6
+      }, 
+      "mapOptions": {
+        "lockSquareGrid": false, 
+        "tilesLayer": "cartodb-positron"
+      }, 
+      "name": "Avg. of revenue by ip_country", 
+      "pieOptions": {
+        "donutHoleSize": 50.0
+      }, 
+      "scatterOptions": {
+        "equalScales": false, 
+        "identityLine": false
+      }, 
+      "showLegend": true, 
+      "showXAxis": false, 
+      "sizeMeasure": [], 
+      "smoothing": false, 
+      "strokeWidth": 1, 
+      "tooltipMeasures": [], 
+      "type": "pie", 
+      "uaColor": [], 
+      "uaShape": [], 
+      "uaSize": [], 
+      "uaTooltip": [], 
+      "uaXDimension": [], 
+      "uaYDimension": [], 
+      "useLiveProcessingIfAvailable": true, 
+      "userEditedName": false, 
+      "variant": "donut", 
+      "xAxisMode": "NORMAL", 
+      "xDimension": [], 
+      "xMeasure": [], 
+      "yAxisMode": "NORMAL", 
+      "yDimension": [], 
+      "yMeasure": []
+    }, 
+    "engineType": "LINO", 
+    "refreshableSelection": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false, 
+      "selection": {
+        "filter": {
+          "distinct": false, 
+          "enabled": false
+        }, 
+        "latestPartitionsN": 1, 
+        "maxReadUncompressedBytes": -1, 
+        "maxRecords": 10000, 
+        "partitionSelectionMethod": "ALL", 
+        "samplingMethod": "HEAD_SEQUENTIAL", 
+        "targetRatio": 0.02, 
+        "useMemTable": false, 
+        "withinFirstN": -1
+      }
+    }
+  }, 
+  "tags": [], 
+  "type": "chart", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486148889701, 
+    "versionNumber": 1
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "charts": [], 
+  "chartsEngine": "LINO", 
+  "explorationFilters": [], 
+  "explorationSampling": {
+    "_refreshTrigger": 0, 
+    "autoRefreshSample": false, 
+    "selection": {
+      "maxRecords": 30000, 
+      "partitionSelectionMethod": "ALL", 
+      "samplingMethod": "HEAD_SEQUENTIAL", 
+      "targetRatio": 0.02
+    }
+  }, 
+  "exploreUIParams": {
+    "autoRefresh": true
+  }, 
+  "steps": [
+    {
+      "disabled": false, 
+      "params": {
+        "clearStopWords": false, 
+        "copyColumns": [
+          "revenue"
+        ], 
+        "copyPrefix": "", 
+        "fuzzy": false, 
+        "language": "english", 
+        "leftCol": "customer_id", 
+        "maxLevenshtein": 1, 
+        "normalize": false, 
+        "rightCol": "customer_id", 
+        "rightInput": "crm_history", 
+        "sortAlphabetically": false, 
+        "stem": false
+      }, 
+      "preview": false, 
+      "type": "MemoryEquiJoiner"
+    }
+  ], 
+  "tags": [], 
+  "vizSampling": {
+    "_refreshTrigger": 0, 
+    "autoRefreshSample": false
+  }
+}

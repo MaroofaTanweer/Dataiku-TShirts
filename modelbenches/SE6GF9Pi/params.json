@@ -1,0 +1,243 @@
+{
+  "core_params": {
+    "target_variable": "revenue",
+    "prediction_type": "regression",
+    "crossval": {
+      "samprate": 0.8
+    },
+    "input": {
+      "datasetProjectKey": "DATAIKU_TSHIRTS",
+      "dataset": "crm_and_web_history_enriched"
+    }
+  },
+  "modeling_params": {
+    "random_forest_regression": {
+      "enabled": true,
+      "n_estimators": [
+        10,
+        25,
+        50
+      ],
+      "n_jobs": 2,
+      "max_tree_depth": 0,
+      "min_samples_leaf": 3
+    },
+    "ridge_regression": {
+      "enabled": false
+    },
+    "lasso_regression": {
+      "enabled": false
+    },
+    "leastsquare_regression": {
+      "enabled": false
+    },
+    "random_forest_classification": {
+      "enabled": false,
+      "n_jobs": 1,
+      "max_tree_depth": 8,
+      "min_samples_leaf": 3
+    },
+    "logistic_regression": {
+      "enabled": false,
+      "l1": false,
+      "l2": false,
+      "C": [
+        1.0
+      ]
+    },
+    "svc_classifier": {
+      "enabled": false,
+      "C": [
+        1.0
+      ],
+      "gamma": [
+        0.0
+      ],
+      "linear": false,
+      "poly": false,
+      "rbf": false,
+      "sigmoid": false,
+      "coef0": 0.0,
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    "sgd_classifier": {
+      "enabled": false,
+      "log": false,
+      "modified_huber": false,
+      "l2": false,
+      "l1": false,
+      "elasticnet": false,
+      "alpha": 0.0,
+      "l1_ratio": 0.15,
+      "n_jobs": 1
+    }
+  },
+  "preprocessing_params": {
+    "per_feature": {
+      "pages_visited": {
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MEDIAN",
+        "name": "pages_visited",
+        "rescaling": false,
+        "role": "INPUT",
+        "type": "NUMERIC"
+      },
+      "revenue": {
+        "name": "revenue",
+        "rescaling": false,
+        "role": "TARGET",
+        "type": "NUMERIC"
+      },
+      "gender": {
+        "category_handling": "DUMMIFY",
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "gender",
+        "rescaling": false,
+        "role": "INPUT",
+        "type": "CATEGORY"
+      },
+      "age": {
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MEDIAN",
+        "name": "age",
+        "rescaling": false,
+        "role": "INPUT",
+        "type": "NUMERIC"
+      },
+      "campain": {
+        "category_handling": "DUMMIFY",
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "campain",
+        "rescaling": false,
+        "role": "INPUT",
+        "type": "CATEGORY"
+      },
+      "ip_country": {
+        "category_handling": "DUMMIFY",
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "ip_country",
+        "rescaling": false,
+        "role": "INPUT",
+        "role_reason": "CATEGORY_CARDINALITY",
+        "type": "CATEGORY"
+      },
+      "customer_id": {
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "customer_id",
+        "rescaling": false,
+        "role": "REJECT",
+        "role_reason": "CATEGORY_CARDINALITY",
+        "type": "CATEGORY"
+      },
+      "price_first_item_purchased": {
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MEDIAN",
+        "name": "price_first_item_purchased",
+        "rescaling": false,
+        "role": "INPUT",
+        "type": "NUMERIC"
+      }
+    },
+    "reduce": {
+      "enable": false,
+      "disable": true,
+      "kept_variance": 0.95
+    },
+    "deduplication": {
+      "enabled": false,
+      "deduplicate_on": "pages_visited"
+    }
+  },
+  "type": "prediction",
+  "metadata": {
+    "name": "Audit CRM by predicting revenue on all data",
+    "description": "### Explanation \n\nUsing all known historical data on customers, we can quite accurately predict revenue with the information that the company gathered.\n\n#### Audit the quality of Dataiku Tshirts CRM policy\n\n- What are the key informations the company need to gather about customers ? Preditive analytics helps understanding the how much gathered informations worth the effort.\n- Business people can learn a lot about the __key facts impacting revenue__ by analyzing the best model variables importance \u003d\u003e look at the __variables importance__ tab in the best [result](/projects/DATAIKU_TSHIRTS/modelbenches/prediction/SE6GF9Pi/results/) of this bench to get an idea.",
+    "tags": [
+      "Machine Learning",
+      "Business intelligence",
+      "Regression"
+    ]
+  },
+  "sample_guess_stats": {
+    "nrows": 29799,
+    "features": {
+      "pages_visited": {
+        "cardinality": 14,
+        "data_type": "float64",
+        "sample_values": "7.0; 9.0; 6.0; 14.0; 3.0",
+        "role": "INPUT",
+        "variable": "pages_visited",
+        "missings": 0,
+        "type": "NUMERIC"
+      },
+      "revenue": {
+        "cardinality": 463,
+        "data_type": "float64",
+        "sample_values": "153.0; 225.0; 159.0; 154.0; 167.0",
+        "role": "INPUT",
+        "variable": "revenue",
+        "missings": 0,
+        "type": "NUMERIC"
+      },
+      "gender": {
+        "cardinality": 2,
+        "data_type": "object",
+        "sample_values": "m; f",
+        "role": "INPUT",
+        "variable": "gender",
+        "missings": 0,
+        "type": "CATEGORY"
+      },
+      "age": {
+        "cardinality": 80,
+        "data_type": "float64",
+        "sample_values": "43.0; 31.0; 55.0; nan; 32.0",
+        "role": "INPUT",
+        "variable": "age",
+        "missings": 4182,
+        "type": "NUMERIC"
+      },
+      "campain": {
+        "cardinality": 2,
+        "data_type": "object",
+        "sample_values": "true; false",
+        "role": "INPUT",
+        "variable": "campain",
+        "missings": 0,
+        "type": "CATEGORY"
+      },
+      "ip_country": {
+        "cardinality": 130,
+        "data_type": "object",
+        "sample_values": "united states; south africa; china; spain; germany",
+        "role": "INPUT",
+        "variable": "ip_country",
+        "missings": 0,
+        "type": "CATEGORY"
+      },
+      "customer_id": {
+        "cardinality": 27347,
+        "data_type": "object",
+        "sample_values": "a4dc1548af; e8f6f7853c; 5802162c20; 67dc195843; 7c52e0eab6",
+        "role": "INPUT",
+        "variable": "customer_id",
+        "missings": 0,
+        "type": "CATEGORY"
+      },
+      "price_first_item_purchased": {
+        "cardinality": 10,
+        "data_type": "float64",
+        "sample_values": "22.0; 44.0; 28.0; 42.0; 10.0",
+        "role": "INPUT",
+        "variable": "price_first_item_purchased",
+        "missings": 0,
+        "type": "NUMERIC"
+      }
+    }
+  }
+}

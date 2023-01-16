@@ -1,0 +1,92 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "checks": [], 
+  "customMeta": {
+    "kv": {}
+  }, 
+  "description": "### Contents\nThis dataset contains all  historical customers interactions on the company web site.\n\n### Must be refined\nSince IP addresses are not self explanatory, we __refine the data__ using the recipe [prepare_web_history_enriched](/projects/DATAIKU_TSHIRTS/recipes/compute_web_history_prepared/#script) to extract the country associated to these addresses.\n\n### Usage\nThese data will be merged with others data for __statistical and predictive analysis__.", 
+  "flowOptions": {
+    "crossProjectBuildBehavior": "DEFAULT", 
+    "rebuildBehavior": "NORMAL"
+  }, 
+  "formatParams": {
+    "arrayMapFormat": "delimited", 
+    "charset": "utf8", 
+    "compress": "", 
+    "dateSerializationFormat": "ISO", 
+    "escapeChar": "\\", 
+    "hiveSeparators": [
+      "\u0002", 
+      "\u0003", 
+      "\u0004", 
+      "\u0005", 
+      "\u0006", 
+      "\u0007", 
+      "\b"
+    ], 
+    "normalizeBooleans": false, 
+    "normalizeDoubles": false, 
+    "parseHeaderRow": true, 
+    "probableNumberOfRecords": 0, 
+    "quoteChar": "\"", 
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING", 
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING", 
+    "readMissingColumnsBehavior": "DISCARD_SILENT", 
+    "separator": ",", 
+    "skipRowsAfterHeader": 0, 
+    "skipRowsBeforeHeader": 0, 
+    "style": "excel", 
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING"
+  }, 
+  "formatType": "csv", 
+  "managed": false, 
+  "metrics": {
+    "probes": []
+  }, 
+  "params": {}, 
+  "partitioning": {
+    "dimensions": [], 
+    "ignoreNonMatchingFile": false
+  }, 
+  "schema": {
+    "columns": [
+      {
+        "maxLength": 1000, 
+        "name": "customer_id", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": 1000, 
+        "name": "ip", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": 1000, 
+        "name": "pages_visited", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": 1000, 
+        "name": "campain", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }
+    ], 
+    "userModified": false
+  }, 
+  "tags": [], 
+  "type": "UploadedFiles", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1461148471266, 
+    "versionNumber": 1
+  }
+}

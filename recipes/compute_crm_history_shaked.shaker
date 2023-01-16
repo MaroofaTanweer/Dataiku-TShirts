@@ -1,0 +1,358 @@
+{
+  "steps": [
+    {
+      "type": "DateParser",
+      "params": {
+        "outCol": "birth_parsed",
+        "lang": "auto",
+        "timezone_id": "UTC",
+        "formats": [
+          "MM/dd/yyyy"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "columns": [
+          "birth"
+        ]
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "DateDifference",
+      "params": {
+        "input1": "birth_parsed",
+        "output": "age",
+        "outputUnit": "YEARS",
+        "compareTo": "NOW"
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "ColumnsSelector",
+      "params": {
+        "keep": false,
+        "appliesTo": "COLUMNS",
+        "columns": [
+          "birth",
+          "birth_parsed"
+        ]
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "column": "age",
+        "expression": "if (age \u003e 0 \u0026\u0026 age \u003c 100, age, \"\")"
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "MemoryEquiJoiner",
+      "params": {
+        "leftCol": "customer_id",
+        "rightInput": "web_history",
+        "rightCol": "customer_id",
+        "copyColumns": [
+          "ip",
+          "pages_visited",
+          "campain"
+        ],
+        "copyPrefix": "",
+        "fuzzy": false,
+        "maxLevenshtein": 1,
+        "forceRawLevenshteinEngine": false,
+        "sortAlphabetically": false,
+        "clearStopWords": false,
+        "normalize": false,
+        "stem": false,
+        "language": "english"
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "GeoIPResolver",
+      "params": {
+        "inCol": "ip",
+        "outColPrefix": "ip_",
+        "extract_country": true,
+        "extract_countrycode": false,
+        "extract_region": false,
+        "extract_city": false,
+        "extract_postalcode": false,
+        "extract_latlng": false,
+        "extract_timezone": false,
+        "extract_continentcode": false,
+        "extract_geopoint": false,
+        "extract_countrycode3": false
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "ColumnsSelector",
+      "params": {
+        "keep": false,
+        "appliesTo": "COLUMNS",
+        "columns": [
+          "ip"
+        ]
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    }
+  ],
+  "name": "Untitled script",
+  "tags": [],
+  "origin": "PREPARE_RECIPE",
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  },
+  "analysisColumnData": {},
+  "explorationSampling": {
+    "selection": {
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "partitionSelectionMethod": "ALL",
+      "maxRecords": 30000,
+      "targetRatio": 0.02
+    },
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "vizSampling": {
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "globalSearchQuery": "",
+  "explorationFilters": [],
+  "previewMode": "ALL_ROWS",
+  "charts": [
+    {
+      "$$hashKey": "0OV",
+      "chartOptions": {
+        "computeOptionsDisplayed": true,
+        "enabledComputeModes": [
+          {
+            "label": "No computation",
+            "shortLabel": "None",
+            "value": "NONE"
+          },
+          {
+            "label": "Compute ratio of each value relative to average of values",
+            "shortLabel": "Ratio to AVG",
+            "value": "LIFT_AVG"
+          }
+        ],
+        "enabledXAxisModes": [
+          {
+            "label": "Normal",
+            "shortLabel": "Normal",
+            "value": "NORMAL"
+          },
+          {
+            "label": "Cumulative values",
+            "shortLabel": "Cumulative",
+            "value": "CUMULATIVE"
+          },
+          {
+            "label": "Difference (replace each value by the diff to the previous one)",
+            "shortLabel": "Difference",
+            "value": "DIFFERENCE"
+          }
+        ],
+        "enabledYAxisModes": [
+          {
+            "label": "Normal",
+            "shortLabel": "Normal",
+            "value": "NORMAL"
+          },
+          {
+            "label": "Logarithmic scale",
+            "shortLabel": "Log",
+            "value": "LOG"
+          }
+        ],
+        "hAxisOptionsDisplayed": true,
+        "vAxisOptionsDisplayed": true,
+        "zeroEnabled": true
+      },
+      "data": {
+        "chartOptions": {},
+        "colorMeasures": [],
+        "computeMode": "NONE",
+        "dimensions": [
+          {
+            "column": "birth_parsed",
+            "dateParams": {
+              "mode": "YEAR"
+            },
+            "filters": [],
+            "generateOthersCategory": true,
+            "isA": "dimension",
+            "possibleNewFilters": [
+              {
+                "group": "Dimension values",
+                "label": "Value of the dimension",
+                "maxValue": 9999,
+                "minValue": 0,
+                "type": "DIMENSION_VALUES"
+              },
+              {
+                "group": "Measure values",
+                "label": "Count of records",
+                "measureFilterId": 0,
+                "type": "MEASURE_VALUES"
+              }
+            ],
+            "possibleSorts": [
+              {
+                "label": "Natural ordering",
+                "type": "NATURAL"
+              },
+              {
+                "label": "Count of records",
+                "measureIdx": 0,
+                "type": "AGGREGATION"
+              }
+            ],
+            "sort": {
+              "label": "Natural ordering",
+              "type": "NATURAL"
+            },
+            "type": "DATE"
+          }
+        ],
+        "filters": [
+          {
+            "$$hashKey": "0PQ",
+            "__justDragDropped": true,
+            "cacheable": true,
+            "column": "birth_parsed",
+            "columnType": "DATE",
+            "dateFilterType": "RANGE",
+            "excludedValues": {},
+            "isA": "filter",
+            "label": "birth_parsed",
+            "minValue": -1661057280000,
+            "type": "DATE"
+          }
+        ],
+        "genericMeasures": [
+          {
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "COUNT",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "hexbinRadius": 20,
+        "includeZero": true,
+        "measures": [
+          {
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "COUNT",
+            "isA": "measure",
+            "type": "NUMERICAL"
+          }
+        ],
+        "name": "Untitled chart 1",
+        "sizeMeasures": [],
+        "type": "grouped_bars",
+        "xAxisMode": "NORMAL",
+        "yAxisMode": "NORMAL"
+      },
+      "dateModes": [
+        {
+          "group": "Timeline",
+          "label": "Year",
+          "value": "YEAR"
+        },
+        {
+          "group": "Timeline",
+          "label": "Month",
+          "value": "MONTH"
+        },
+        {
+          "group": "Timeline",
+          "label": "Week",
+          "value": "WEEK"
+        },
+        {
+          "group": "Timeline",
+          "label": "Day",
+          "value": "DAY"
+        },
+        {
+          "group": "Timeline",
+          "label": "Hour",
+          "value": "HOUR"
+        },
+        {
+          "group": "Regroup",
+          "label": "Quarter of Year",
+          "value": "QUARTER_OF_YEAR"
+        },
+        {
+          "group": "Regroup",
+          "label": "Month of Year",
+          "value": "MONTH_OF_YEAR"
+        },
+        {
+          "group": "Regroup",
+          "label": "Week of year",
+          "value": "WEEK_OF_YEAR"
+        },
+        {
+          "group": "Regroup",
+          "label": "Day of month",
+          "value": "DAY_OF_MONTH"
+        },
+        {
+          "group": "Regroup",
+          "label": "Day of week",
+          "value": "DAY_OF_WEEK"
+        },
+        {
+          "group": "Regroup",
+          "label": "Hour of day",
+          "value": "HOUR_OF_DAY"
+        }
+      ],
+      "multiplotDisplayModes": [
+        "column",
+        "line"
+      ]
+    }
+  ],
+  "chartsEngine": "LINO"
+}

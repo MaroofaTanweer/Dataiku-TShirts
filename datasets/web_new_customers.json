@@ -1,0 +1,92 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "checks": [], 
+  "customMeta": {
+    "kv": {}
+  }, 
+  "description": "### Contents\n\nThe new customers navigational data are logged here.\n\n### Usage\n\nWe want to know which monthly revenue they will generate.", 
+  "flowOptions": {
+    "crossProjectBuildBehavior": "DEFAULT", 
+    "rebuildBehavior": "NORMAL"
+  }, 
+  "formatParams": {
+    "arrayMapFormat": "delimited", 
+    "charset": "utf8", 
+    "compress": "", 
+    "dateSerializationFormat": "ISO", 
+    "escapeChar": "\\", 
+    "hiveSeparators": [
+      "\u0002", 
+      "\u0003", 
+      "\u0004", 
+      "\u0005", 
+      "\u0006", 
+      "\u0007", 
+      "\b"
+    ], 
+    "normalizeBooleans": false, 
+    "normalizeDoubles": false, 
+    "parseHeaderRow": true, 
+    "probableNumberOfRecords": 0, 
+    "quoteChar": "\"", 
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING", 
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING", 
+    "readMissingColumnsBehavior": "DISCARD_SILENT", 
+    "separator": ",", 
+    "skipRowsAfterHeader": 0, 
+    "skipRowsBeforeHeader": 0, 
+    "style": "excel", 
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING"
+  }, 
+  "formatType": "csv", 
+  "managed": false, 
+  "metrics": {
+    "probes": []
+  }, 
+  "params": {}, 
+  "partitioning": {
+    "dimensions": [], 
+    "ignoreNonMatchingFile": false
+  }, 
+  "schema": {
+    "columns": [
+      {
+        "maxLength": 1000, 
+        "name": "customer_id", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": 1000, 
+        "name": "ip", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": 1000, 
+        "name": "pages_visited", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }, 
+      {
+        "maxLength": 1000, 
+        "name": "campain", 
+        "timestampNoTzAsDate": false, 
+        "type": "string"
+      }
+    ], 
+    "userModified": false
+  }, 
+  "tags": [], 
+  "type": "UploadedFiles", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1461148473190, 
+    "versionNumber": 0
+  }
+}

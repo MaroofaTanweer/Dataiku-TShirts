@@ -1,0 +1,30 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "Vs6j4B8H",
+    "objectType": "SAVED_MODEL",
+    "metricId": "model_perf:MAPE"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "MAPE on model_web_history_prepared",
+  "dashboardCreationId": "U6v9FZ6",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061740
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061740
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

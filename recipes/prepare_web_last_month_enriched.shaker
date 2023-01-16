@@ -1,0 +1,81 @@
+{
+  "steps": [
+    {
+      "type": "GeoIPResolver",
+      "params": {
+        "inCol": "ip",
+        "outColPrefix": "ip_",
+        "extract_country": true,
+        "extract_countrycode": false,
+        "extract_region": false,
+        "extract_city": false,
+        "extract_postalcode": false,
+        "extract_latlng": false,
+        "extract_timezone": false,
+        "extract_continentcode": false,
+        "extract_geopoint": false,
+        "extract_countrycode3": false
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    },
+    {
+      "type": "MemoryEquiJoiner",
+      "params": {
+        "leftCol": "customer_id",
+        "rightInput": "crm_last_month",
+        "rightCol": "customer_id",
+        "copyColumns": [
+          "revenue"
+        ],
+        "copyPrefix": "",
+        "fuzzy": false,
+        "maxLevenshtein": 1,
+        "sortAlphabetically": false,
+        "clearStopWords": false,
+        "normalize": false,
+        "stem": false,
+        "language": "english"
+      },
+      "metaType": "PROCESSOR",
+      "preview": false,
+      "disabled": false,
+      "alwaysShowComment": false
+    }
+  ],
+  "tags": [],
+  "origin": "PREPARE_RECIPE",
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  },
+  "analysisColumnData": {},
+  "explorationSampling": {
+    "selection": {
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "partitionSelectionMethod": "ALL",
+      "maxRecords": 30000,
+      "targetRatio": 0.02
+    },
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "vizSampling": {
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "globalSearchQuery": "",
+  "explorationFilters": [],
+  "previewMode": "ALL_ROWS",
+  "charts": [],
+  "chartsEngine": "LINO"
+}

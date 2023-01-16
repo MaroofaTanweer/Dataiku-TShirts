@@ -1,0 +1,524 @@
+{
+    "core": {
+        "target_variable": "revenue",
+        "prediction_type": "REGRESSION"
+    },
+    "generatingModelId": "A-DKU_TSHIRTS-gPd2KlKo-60zKZeke-s7-pp1-m1",
+    "splitParams": {
+        "kfold": false,
+        "splitBeforePrepare": true,
+        "instanceIdRefresher": 3,
+        "ttPolicy": "SPLIT_SINGLE_DATASET",
+        "ssdSplitMode": "RANDOM",
+        "ssdSelection": {
+            "targetRatio": 0.02,
+            "maxReadUncompressedBytes": -1,
+            "latestPartitionsN": 1,
+            "filter": {
+                "distinct": false,
+                "enabled": false
+            },
+            "withinFirstN": -1,
+            "maxRecords": 100000,
+            "partitionSelectionMethod": "ALL",
+            "useMemTable": false,
+            "samplingMethod": "HEAD_SEQUENTIAL"
+        },
+        "ssdTrainingRatio": 0.8,
+        "ssdSeed": 1337,
+        "nFolds": 5,
+        "subSamplingSeed": 1337
+    },
+    "backendType": "PY_MEMORY",
+    "script": {
+        "maxProcessedMemTableBytes": -1,
+        "sorting": [],
+        "contextProjectKey": "DKU_TSHIRTS",
+        "columnsSelection": {
+            "mode": "ALL"
+        },
+        "analysisColumnData": {},
+        "exploreUIParams": {
+            "autoRefresh": true
+        },
+        "vizSampling": {
+            "autoRefreshSample": false,
+            "_refreshTrigger": 0
+        },
+        "coloring": {
+            "scheme": "MEANING_AND_STATUS",
+            "valueColoringMode": "HASH",
+            "individualColumns": []
+        },
+        "steps": [
+            {
+                "metaType": "PROCESSOR",
+                "alwaysShowComment": false,
+                "disabled": false,
+                "params": {
+                    "outColPrefix": "ip_",
+                    "extract_latlng": false,
+                    "extract_postalcode": false,
+                    "extract_country": true,
+                    "extract_geopoint": false,
+                    "extract_countrycode3": false,
+                    "extract_city": false,
+                    "extract_countrycode": false,
+                    "inCol": "ip",
+                    "extract_continentcode": false,
+                    "extract_timezone": false,
+                    "extract_region": false
+                },
+                "preview": false,
+                "type": "GeoIPResolver"
+            }
+        ],
+        "globalSearchQuery": "",
+        "previewMode": "ALL_ROWS",
+        "explorationSampling": {
+            "autoRefreshSample": false,
+            "selection": {
+                "targetRatio": 0.02,
+                "maxReadUncompressedBytes": -1,
+                "latestPartitionsN": 1,
+                "filter": {
+                    "distinct": false,
+                    "enabled": false
+                },
+                "withinFirstN": -1,
+                "maxRecords": 30000,
+                "partitionSelectionMethod": "ALL",
+                "maxStoredBytes": -1,
+                "samplingMethod": "HEAD_SEQUENTIAL"
+            },
+            "_refreshTrigger": 2
+        },
+        "explorationFilters": []
+    },
+    "sparkParams": {
+        "pipelineAllowStart": null,
+        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+        "sparkConf": null,
+        "sparkRepartitionNonHDFS": 1,
+        "pipelineAllowMerge": null
+    },
+    "preprocessing": {
+        "deduplication": {
+            "enabled": false
+        },
+        "reduce": {
+            "enabled": false,
+            "kept_variance": 0.0
+        },
+        "numerical_combinations": {
+            "pairwiseLinear": false,
+            "polynomialInteraction": false
+        },
+        "target_remapping": [],
+        "feature_generation": {
+            "manual_interactions": {
+                "interactions": []
+            },
+            "pairwise_linear": {
+                "behavior": "DISABLED"
+            },
+            "polynomial_combinations": {
+                "behavior": "DISABLED"
+            }
+        },
+        "featureSelection": {
+            "kind": "NONE",
+            "filterOnlyKBestNbToKeep": 10
+        },
+        "per_feature": {
+            "pages_visited": {
+                "generate_derivative": false,
+                "missing_impute_with": "MEAN",
+                "name": "pages_visited",
+                "numerical_handling": "REGULAR",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "dssWantsToModify": false,
+                    "userModified": false,
+                    "autoModifiedByDSS": false,
+                    "recordedMeaning": "DoubleMeaning"
+                },
+                "missing_handling": "IMPUTE",
+                "quantile_bin_nb_bins": 4,
+                "binarize_constant_threshold": 0.0,
+                "role": "INPUT",
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "revenue": {
+                "generate_derivative": false,
+                "name": "revenue",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "dssWantsToModify": false,
+                    "userModified": false,
+                    "autoModifiedByDSS": false,
+                    "recordedMeaning": "LongMeaning"
+                },
+                "role": "TARGET",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "ip": {
+                "min_samples": 10,
+                "missing_impute_with": "MODE",
+                "name": "ip",
+                "category_handling": "DUMMIFY",
+                "cumulative_proportion": 0.95,
+                "state": {
+                    "dssWantsToModify": false,
+                    "userModified": false,
+                    "autoModifiedByDSS": false,
+                    "recordedMeaning": "IPAddress"
+                },
+                "missing_handling": "IMPUTE",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "role": "REJECT",
+                "max_cat_safety": 200,
+                "autoReason": "REJECT_IDENTIFIER",
+                "type": "CATEGORY",
+                "dummy_drop": "NONE",
+                "hash_whole_categories": false
+            },
+            "campain": {
+                "min_samples": 10,
+                "name": "campain",
+                "category_handling": "DUMMIFY",
+                "cumulative_proportion": 0.95,
+                "state": {
+                    "dssWantsToModify": false,
+                    "userModified": false,
+                    "autoModifiedByDSS": false,
+                    "recordedMeaning": "Boolean"
+                },
+                "missing_handling": "IMPUTE",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "role": "INPUT",
+                "max_cat_safety": 200,
+                "missing_impute_with": "MODE",
+                "type": "CATEGORY",
+                "dummy_drop": "NONE",
+                "hash_whole_categories": false
+            },
+            "ip_country": {
+                "min_samples": 10,
+                "name": "ip_country",
+                "category_handling": "DUMMIFY",
+                "cumulative_proportion": 0.95,
+                "state": {
+                    "dssWantsToModify": false,
+                    "userModified": false,
+                    "autoModifiedByDSS": false,
+                    "recordedMeaning": "CountryMeaning"
+                },
+                "missing_handling": "IMPUTE",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "role": "INPUT",
+                "max_cat_safety": 200,
+                "missing_impute_with": "MODE",
+                "type": "CATEGORY",
+                "dummy_drop": "NONE",
+                "hash_whole_categories": false
+            },
+            "customer_id": {
+                "min_samples": 10,
+                "name": "customer_id",
+                "category_handling": "DUMMIFY",
+                "cumulative_proportion": 0.95,
+                "state": {
+                    "dssWantsToModify": false,
+                    "userModified": true,
+                    "autoModifiedByDSS": false,
+                    "recordedMeaning": "Text"
+                },
+                "missing_handling": "IMPUTE",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "role": "REJECT",
+                "max_cat_safety": 200,
+                "missing_impute_with": "MODE",
+                "type": "CATEGORY",
+                "dummy_drop": "NONE",
+                "hash_whole_categories": false
+            }
+        }
+    },
+    "modeling": {
+        "rf_max_features": 0,
+        "gbt_max_feature_prop": 0.0,
+        "rf_regressor_grid": {
+            "n_jobs": 1,
+            "max_tree_depth": {
+                "values": [
+                    23
+                ],
+                "gridMode": "EXPLICIT",
+                "randomMode": "RANGE",
+                "limit": {
+                    "max": null,
+                    "min": 1
+                },
+                "range": {
+                    "scaling": "LINEAR",
+                    "max": 10,
+                    "nbValues": 3,
+                    "min": 5
+                }
+            },
+            "selection_mode": "auto",
+            "enabled": true,
+            "min_samples_leaf": {
+                "values": [
+                    17
+                ],
+                "gridMode": "EXPLICIT",
+                "randomMode": "RANGE",
+                "limit": {
+                    "max": null,
+                    "min": 1
+                },
+                "range": {
+                    "scaling": "LINEAR",
+                    "max": 20,
+                    "nbValues": 3,
+                    "min": 3
+                }
+            },
+            "n_estimators": {
+                "values": [
+                    100
+                ],
+                "gridMode": "EXPLICIT",
+                "randomMode": "RANGE",
+                "limit": {
+                    "max": null,
+                    "min": 1
+                },
+                "range": {
+                    "scaling": "LINEAR",
+                    "max": 200,
+                    "nbValues": 3,
+                    "min": 80
+                }
+            },
+            "max_feature_prop": {
+                "values": [
+                    0.3
+                ],
+                "gridMode": "EXPLICIT",
+                "randomMode": "RANGE",
+                "limit": {
+                    "max": 1,
+                    "min": 1e-23
+                },
+                "range": {
+                    "scaling": "LINEAR",
+                    "max": 0.7,
+                    "nbValues": 3,
+                    "min": 0.1
+                }
+            },
+            "max_features": {
+                "values": [
+                    0
+                ],
+                "gridMode": "EXPLICIT",
+                "randomMode": "RANGE",
+                "limit": {
+                    "max": null,
+                    "min": 1
+                },
+                "range": {
+                    "scaling": "LINEAR",
+                    "max": 20,
+                    "nbValues": 3,
+                    "min": 1
+                }
+            }
+        },
+        "mllib_gbt_min_instance_per_node": 1,
+        "xgboost_base_score": 0.0,
+        "gbt_n_estimators": 0,
+        "mtries": -1,
+        "gbt_learning_rate": 0.0,
+        "rf_njobs": 0,
+        "xgboost_max_depth": 0,
+        "computeLearningCurves": false,
+        "gbt_max_features": 0,
+        "min_rows": 10,
+        "gbt_max_depth": 0,
+        "knn_p": 0,
+        "vertica_reg_epsilon": 0.0,
+        "nbins": 20,
+        "mllib_dt_max_bins": 32,
+        "mllib_gbt_checkpoint_interval": 10,
+        "mllib_dt_min_info_gain": 0.0,
+        "l2": 0.0,
+        "mllib_logit_enet_param": 0.0,
+        "l1": 0.0,
+        "knn_leaf_size": 0,
+        "autoOptimizeThreshold": true,
+        "mllib_rf_min_instance_per_node": 1,
+        "xgboost_scale_pos_weight": 0.0,
+        "rate": 0.0,
+        "xgboost_silent": false,
+        "mllib_rf_max_bins": 32,
+        "mllib_gbt_max_depth": 5,
+        "mllib_dt_max_memory_mb": 256,
+        "xgboost_seed": 0,
+        "xgboost_gamma": 0.0,
+        "xgboost_min_child_weight": 0.0,
+        "mllib_rf_cache_node_ids": false,
+        "mllib_naive_bayes_lambda": 1.0,
+        "C": 0.0,
+        "mllib_linreg_enet_param": 0.0,
+        "mllib_gbt_seed": 0,
+        "mllib_dt_cache_node_ids": false,
+        "mllib_logit_reg_param": 0.1,
+        "mllib_dt_checkpoint_interval": 10,
+        "xgboost_subsample": 0.0,
+        "mllib_gbt_min_info_gain": 0.0,
+        "beta_epsilon": 0.0001,
+        "tweedie_variance_power": 0.0,
+        "rf_max_feature_prop": 0.0,
+        "mllib_gbt_max_memory_mb": 256,
+        "max_ensemble_nodes_serialized": 6000,
+        "xgboost_lambda": 0.0,
+        "mllib_rf_impurity": "gini",
+        "lambda": 1e-05,
+        "learn_rate": 0.1,
+        "family": "gaussian",
+        "dtc_max_depth": 0,
+        "rf_min_samples_leaf": 0,
+        "mllib_rf_seed": 0,
+        "gbt_min_samples_leaf": 0,
+        "input_dropout_ratio": 0.0,
+        "mllib_gbt_num_trees": 50,
+        "dtc_min_samples_leaf": 0,
+        "mllib_rf_max_depth": 5,
+        "mllib_dt_max_depth": 5,
+        "rf_max_tree_depth": 0,
+        "mllib_rf_num_trees": 20,
+        "rf_estimators": 0,
+        "tol": 0.0,
+        "mllib_linreg_reg_param": 0.1,
+        "coef0": 0.0,
+        "max_depth": 5,
+        "mllib_linreg_max_iter": 10,
+        "ntrees": 50,
+        "adaptive_rate": 1,
+        "epsilon": 1e-06,
+        "xgboost_colsample_bytree": 0.0,
+        "xgboost_max_delta_step": 0.0,
+        "mllib_gbt_max_bins": 32,
+        "n_jobs": 0,
+        "mllib_rf_subset_strategy": "auto",
+        "mllib_dt_min_instance_per_node": 1,
+        "xgboost_colsample_bylevel": 0.0,
+        "l1_ratio": 0.0,
+        "mllib_logit_max_iter": 10,
+        "xgboost_alpha": 0.0,
+        "mllib_gbt_impurity": "gini",
+        "forcedClassifierThreshold": 0.0,
+        "n_folds": 0,
+        "rate_annealing": 0.0,
+        "xgboost_impute_missing": false,
+        "mllib_gbt_subsampling_rate": 1.0,
+        "mllib_rf_max_memory_mb": 256,
+        "xgboost_learning_rate": 0.0,
+        "sample_rate": 0.6666,
+        "xgboost_n_estimators": 0,
+        "xgboost_missing": 0.0,
+        "standardize": 1,
+        "xgboost_enable_early_stopping": false,
+        "knn_k": 0,
+        "max_iter": 0,
+        "xgboost_nthread": 0,
+        "mllib_rf_subsampling_rate": 1.0,
+        "metrics": {
+            "customEvaluationMetricNeedsProba": false,
+            "evaluationMetric": "R2",
+            "liftPoint": 0.4,
+            "customEvaluationMetricGIB": true,
+            "costMatrixWeights": {
+                "tpGain": 1.0,
+                "fnGain": 0.0,
+                "tnGain": 0.0,
+                "fpGain": -0.3
+            }
+        },
+        "rho": 0.95,
+        "mllib_rf_min_info_gain": 0.0,
+        "alpha": 0.0,
+        "knn_distance_weighting": false,
+        "algorithm": "RANDOM_FOREST_REGRESSION",
+        "mllib_gbt_step_size": 0.1,
+        "grid_search_params": {
+            "nJobs": -1,
+            "shuffleIterations": 1,
+            "mode": "KFOLD",
+            "splitRatio": 0.8,
+            "nFolds": 3,
+            "stratified": true,
+            "cvSeed": 1337
+        },
+        "vertica_reg_iterations": 0,
+        "xgboost_early_stopping_rounds": 0,
+        "gamma": 0.0,
+        "mllib_rf_checkpoint_interval": 10,
+        "mllib_gbt_cache_node_ids": false
+    },
+    "expectedPreparationOutputSchema": {
+        "userModified": false,
+        "columns": [
+            {
+                "type": "string",
+                "timestampNoTzAsDate": false,
+                "name": "customer_id",
+                "maxLength": -1
+            },
+            {
+                "type": "string",
+                "timestampNoTzAsDate": false,
+                "name": "ip",
+                "maxLength": -1
+            },
+            {
+                "type": "string",
+                "timestampNoTzAsDate": false,
+                "name": "ip_country",
+                "maxLength": -1
+            },
+            {
+                "type": "double",
+                "timestampNoTzAsDate": false,
+                "name": "pages_visited",
+                "maxLength": -1
+            },
+            {
+                "type": "boolean",
+                "timestampNoTzAsDate": false,
+                "name": "campain",
+                "maxLength": -1
+            },
+            {
+                "type": "bigint",
+                "timestampNoTzAsDate": false,
+                "name": "revenue",
+                "maxLength": -1
+            }
+        ]
+    },
+    "operationMode": "TRAIN_SPLITTED_ONLY"
+}

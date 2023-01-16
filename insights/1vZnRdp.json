@@ -1,0 +1,136 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486128061733, 
+    "versionNumber": 0
+  }, 
+  "dashboardCreationId": "U6v9FZ6", 
+  "description": "", 
+  "listed": false, 
+  "name": "Avg. of predicted revenue by country", 
+  "owner": "admin", 
+  "params": {
+    "datasetSmartName": "revenue_prediction", 
+    "def": {
+      "axis1LogScale": false, 
+      "axis2LogScale": false, 
+      "boxplotBreakdownDim": [], 
+      "boxplotValue": [], 
+      "bubblesOptions": {
+        "defaultRadius": 5.0
+      }, 
+      "colorMeasure": [
+        {
+          "column": "prediction", 
+          "computeMode": "NORMAL", 
+          "computeModeDim": 1, 
+          "displayAxis": "axis1", 
+          "displayType": "column", 
+          "displayed": true, 
+          "function": "AVG", 
+          "isA": "measure", 
+          "type": "NUMERICAL"
+        }
+      ], 
+      "colorOptions": {
+        "ccScaleMode": "NORMAL", 
+        "colorPalette": "default", 
+        "singleColor": "#659a88", 
+        "transparency": 0.9
+      }, 
+      "colorPaletteType": "LINEAR", 
+      "computeMode": "NORMAL", 
+      "disableSafetyLimits": false, 
+      "filters": [], 
+      "genericDimension0": [], 
+      "genericDimension1": [], 
+      "genericMeasures": [], 
+      "geometry": [
+        {
+          "adminLevel": 2, 
+          "column": "ip_geopoint", 
+          "isA": "ua", 
+          "treatAsAlphanum": false, 
+          "type": "GEOPOINT"
+        }
+      ], 
+      "groupDimension": [], 
+      "hexbinNumber": 20, 
+      "hexbinRadius": 20, 
+      "hexbinRadiusMode": "NUM_HEXAGONS", 
+      "includeZero": true, 
+      "mapGridOptions": {
+        "gridLatDeg": 0.6, 
+        "gridLonDeg": 0.6
+      }, 
+      "mapOptions": {
+        "lockSquareGrid": false, 
+        "tilesLayer": "cartodb-positron"
+      }, 
+      "name": "Avg. of predicted revenue by country", 
+      "pieOptions": {
+        "donutHoleSize": 50.0
+      }, 
+      "scatterOptions": {
+        "equalScales": false, 
+        "identityLine": false
+      }, 
+      "showLegend": true, 
+      "showXAxis": false, 
+      "sizeMeasure": [], 
+      "smoothing": false, 
+      "strokeWidth": 1, 
+      "tooltipMeasures": [], 
+      "type": "admin_map", 
+      "uaColor": [], 
+      "uaShape": [], 
+      "uaSize": [], 
+      "uaTooltip": [], 
+      "uaXDimension": [], 
+      "uaYDimension": [], 
+      "useLiveProcessingIfAvailable": true, 
+      "userEditedName": true, 
+      "variant": "filled_map", 
+      "xAxisMode": "NORMAL", 
+      "xDimension": [], 
+      "xMeasure": [], 
+      "yAxisMode": "NORMAL", 
+      "yDimension": [], 
+      "yMeasure": []
+    }, 
+    "engineType": "LINO", 
+    "refreshableSelection": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false, 
+      "selection": {
+        "filter": {
+          "distinct": false, 
+          "enabled": false
+        }, 
+        "latestPartitionsN": 1, 
+        "maxReadUncompressedBytes": -1, 
+        "maxRecords": 30000, 
+        "partitionSelectionMethod": "ALL", 
+        "samplingMethod": "HEAD_SEQUENTIAL", 
+        "targetRatio": 0.02, 
+        "useMemTable": false, 
+        "withinFirstN": -1
+      }
+    }
+  }, 
+  "shortDesc": "", 
+  "tags": [], 
+  "type": "chart", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486128061733, 
+    "versionNumber": 0
+  }
+}

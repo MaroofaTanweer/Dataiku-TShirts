@@ -1,0 +1,465 @@
+{
+  "steps": [
+    {
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "birth",
+        "separator": "/",
+        "outColPrefix": "birth_",
+        "limitOutput": true,
+        "limit": 1,
+        "startFrom": "end"
+      },
+      "preview": false,
+      "disabled": false
+    },
+    {
+      "type": "DateParser",
+      "params": {
+        "inCol": "birth",
+        "outCol": "birth_parsed",
+        "format": "MM/dd/yyyy",
+        "lang": "auto",
+        "timezone_id": "UTC"
+      },
+      "preview": false,
+      "disabled": false
+    },
+    {
+      "type": "DateDifference",
+      "params": {
+        "input1": "birth_parsed",
+        "output": "age",
+        "outputUnit": "YEARS",
+        "compareTo": "NOW"
+      },
+      "preview": true,
+      "disabled": false
+    }
+  ],
+  "name": "Untitled script 1",
+  "tags": [],
+  "explorationSampling": {
+    "selection": {
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "partitionSelectionMethod": "ALL",
+      "maxRecords": 30000,
+      "targetRatio": 0.02
+    },
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "vizSampling": {
+    "autoRefreshSample": false,
+    "_refreshTrigger": 0
+  },
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "explorationFilters": [
+    {
+      "type": "global_search",
+      "$$hashKey": "3JJ"
+    },
+    {
+      "type": "facet",
+      "column": "birth_0",
+      "columnType": "NUMERICAL",
+      "currentMode": "NUMERICAL",
+      "sort": "count",
+      "minValue": 2012.314543,
+      "selectedValues": {},
+      "$$hashKey": "47W"
+    }
+  ],
+  "expectedInputSchema": {
+    "userModified": false,
+    "columns": [
+      {
+        "name": "customer_id",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "birth",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "price_first_item_purchased",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "gender",
+        "type": "string",
+        "maxLength": 1000
+      },
+      {
+        "name": "revenue",
+        "type": "string",
+        "maxLength": 1000
+      }
+    ]
+  },
+  "charts": [
+    {
+      "data": {
+        "name": "Customers gender",
+        "genericMeasures": [
+          {
+            "function": "COUNT",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column"
+          }
+        ],
+        "dimensions": [
+          {
+            "column": "gender",
+            "type": "ALPHANUM",
+            "maxValues": 20,
+            "generateOthersCategory": true,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Count of records"
+              }
+            ],
+            "sort": {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Count of records"
+            },
+            "possibleNewFilters": [
+              {
+                "type": "MEASURE_VALUES",
+                "measureFilterId": 0,
+                "label": "Count of records",
+                "group": "Measure values"
+              }
+            ]
+          }
+        ],
+        "type": "grouped_bars",
+        "includeZero": true,
+        "chartOptions": {},
+        "hexbinRadius": 20,
+        "yAxisMode": "NORMAL",
+        "xAxisMode": "NORMAL",
+        "computeMode": "NONE",
+        "filters": [],
+        "colorMeasures": [],
+        "sizeMeasures": [],
+        "measures": [
+          {
+            "function": "COUNT",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column"
+          }
+        ]
+      },
+      "$$hashKey": "3AW",
+      "chartOptions": {
+        "zeroEnabled": true,
+        "enabledYAxisModes": [
+          {
+            "value": "NORMAL",
+            "label": "Normal",
+            "shortLabel": "Normal"
+          },
+          {
+            "value": "LOG",
+            "label": "Logarithmic scale",
+            "shortLabel": "Log"
+          }
+        ],
+        "enabledXAxisModes": [
+          {
+            "value": "NORMAL",
+            "label": "Normal",
+            "shortLabel": "Normal"
+          },
+          {
+            "value": "CUMULATIVE",
+            "label": "Cumulative values",
+            "shortLabel": "Cumulative"
+          },
+          {
+            "value": "DIFFERENCE",
+            "label": "Difference (replace each value by the diff to the previous one)",
+            "shortLabel": "Difference"
+          }
+        ],
+        "enabledComputeModes": [
+          {
+            "value": "NONE",
+            "label": "No computation",
+            "shortLabel": "None"
+          },
+          {
+            "value": "LIFT_AVG",
+            "shortLabel": "Ratio to AVG",
+            "label": "Compute ratio of each value relative to average of values"
+          }
+        ],
+        "computeOptionsDisplayed": true,
+        "vAxisOptionsDisplayed": true,
+        "hAxisOptionsDisplayed": true
+      },
+      "multiplotDisplayModes": [
+        "column",
+        "line"
+      ],
+      "dateModes": [
+        {
+          "group": "Timeline",
+          "value": "YEAR",
+          "label": "Year"
+        },
+        {
+          "group": "Timeline",
+          "value": "MONTH",
+          "label": "Month"
+        },
+        {
+          "group": "Timeline",
+          "value": "WEEK",
+          "label": "Week"
+        },
+        {
+          "group": "Timeline",
+          "value": "DAY",
+          "label": "Day"
+        },
+        {
+          "group": "Timeline",
+          "value": "HOUR",
+          "label": "Hour"
+        },
+        {
+          "group": "Regroup",
+          "value": "QUARTER_OF_YEAR",
+          "label": "Quarter of Year"
+        },
+        {
+          "group": "Regroup",
+          "value": "MONTH_OF_YEAR",
+          "label": "Month of Year"
+        },
+        {
+          "group": "Regroup",
+          "value": "WEEK_OF_YEAR",
+          "label": "Week of year"
+        },
+        {
+          "group": "Regroup",
+          "value": "DAY_OF_MONTH",
+          "label": "Day of month"
+        },
+        {
+          "group": "Regroup",
+          "value": "DAY_OF_WEEK",
+          "label": "Day of week"
+        },
+        {
+          "group": "Regroup",
+          "value": "HOUR_OF_DAY",
+          "label": "Hour of day"
+        }
+      ]
+    },
+    {
+      "data": {
+        "name": "Average revenue / gender",
+        "genericMeasures": [
+          {
+            "column": "revenue",
+            "function": "AVG",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column"
+          }
+        ],
+        "dimensions": [
+          {
+            "column": "gender",
+            "type": "ALPHANUM",
+            "maxValues": 20,
+            "generateOthersCategory": true,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of revenue"
+              }
+            ],
+            "sort": {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Average of revenue"
+            },
+            "possibleNewFilters": [
+              {
+                "type": "MEASURE_VALUES",
+                "measureFilterId": 0,
+                "label": "Average of revenue",
+                "group": "Measure values"
+              }
+            ]
+          }
+        ],
+        "type": "grouped_bars",
+        "includeZero": true,
+        "chartOptions": {},
+        "hexbinRadius": 20,
+        "yAxisMode": "NORMAL",
+        "xAxisMode": "NORMAL",
+        "computeMode": "NONE",
+        "filters": [],
+        "colorMeasures": [],
+        "sizeMeasures": [],
+        "measures": [
+          {
+            "column": "revenue",
+            "function": "AVG",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column"
+          }
+        ]
+      },
+      "$$hashKey": "3MR",
+      "chartOptions": {
+        "zeroEnabled": true,
+        "enabledYAxisModes": [
+          {
+            "value": "NORMAL",
+            "label": "Normal",
+            "shortLabel": "Normal"
+          },
+          {
+            "value": "LOG",
+            "label": "Logarithmic scale",
+            "shortLabel": "Log"
+          }
+        ],
+        "enabledXAxisModes": [
+          {
+            "value": "NORMAL",
+            "label": "Normal",
+            "shortLabel": "Normal"
+          },
+          {
+            "value": "CUMULATIVE",
+            "label": "Cumulative values",
+            "shortLabel": "Cumulative"
+          },
+          {
+            "value": "DIFFERENCE",
+            "label": "Difference (replace each value by the diff to the previous one)",
+            "shortLabel": "Difference"
+          }
+        ],
+        "enabledComputeModes": [
+          {
+            "value": "NONE",
+            "label": "No computation",
+            "shortLabel": "None"
+          },
+          {
+            "value": "LIFT_AVG",
+            "shortLabel": "Ratio to AVG",
+            "label": "Compute ratio of each value relative to average of values"
+          }
+        ],
+        "vAxisOptionsDisplayed": true,
+        "hAxisOptionsDisplayed": true,
+        "computeOptionsDisplayed": true
+      },
+      "multiplotDisplayModes": [
+        "column",
+        "line"
+      ],
+      "dateModes": [
+        {
+          "group": "Timeline",
+          "value": "YEAR",
+          "label": "Year"
+        },
+        {
+          "group": "Timeline",
+          "value": "MONTH",
+          "label": "Month"
+        },
+        {
+          "group": "Timeline",
+          "value": "WEEK",
+          "label": "Week"
+        },
+        {
+          "group": "Timeline",
+          "value": "DAY",
+          "label": "Day"
+        },
+        {
+          "group": "Timeline",
+          "value": "HOUR",
+          "label": "Hour"
+        },
+        {
+          "group": "Regroup",
+          "value": "QUARTER_OF_YEAR",
+          "label": "Quarter of Year"
+        },
+        {
+          "group": "Regroup",
+          "value": "MONTH_OF_YEAR",
+          "label": "Month of Year"
+        },
+        {
+          "group": "Regroup",
+          "value": "WEEK_OF_YEAR",
+          "label": "Week of year"
+        },
+        {
+          "group": "Regroup",
+          "value": "DAY_OF_MONTH",
+          "label": "Day of month"
+        },
+        {
+          "group": "Regroup",
+          "value": "DAY_OF_WEEK",
+          "label": "Day of week"
+        },
+        {
+          "group": "Regroup",
+          "value": "HOUR_OF_DAY",
+          "label": "Hour of day"
+        }
+      ]
+    }
+  ]
+}

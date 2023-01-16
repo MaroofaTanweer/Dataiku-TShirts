@@ -1,0 +1,87 @@
+{
+  "charts": [], 
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1430748977745, 
+    "versionNumber": 0
+  }, 
+  "description": "## GOALS\n\n* Using navigational data gathered during the first purchase of customers, we predict the monthly revenue new customers will generate.\n\n## HOW WE PROCEED ?\n\n0. We [enrich the data](/projects/DKU_TSHIRTS/analysis/gPd2KlKo/script/#script) by adding a country column associated to the IP address.\n1. We construct [various models]((/projects/DKU_TSHIRTS/analysis/gPd2KlKo/ml/) to predict revenue based on historical data that we have previously processed.\n2.  the [best predictive model](/projects/DKU_TSHIRTS/analysis/gPd2KlKo/ml/p/60zKZeke/A-DKU_TSHIRTS-gPd2KlKo-60zKZeke-s4-pp1-m1/report/#variables_importance) is deployed for production in the [flow](/projects/DKU_TSHIRTS/flow/)\n3. The model will be [frequently updated](/projects/DKU_TSHIRTS/savedmodels/Vs6j4B8H/versions/) with the most recent data to get prediction that corresponds to latest customers trends.\n4. This updated model will then be used to [predict the monthly revenue on the new customers](/projects/DKU_TSHIRTS/datasets/revenue_prediction/explore/#filters).", 
+  "inputDatasetSmartName": "web_history_prepared", 
+  "name": "Predict revenue using historical navigational data on the web site", 
+  "script": {
+    "analysisColumnData": {}, 
+    "charts": [], 
+    "chartsEngine": "LINO", 
+    "coloring": {
+      "individualColumns": [], 
+      "scheme": "MEANING_AND_STATUS", 
+      "valueColoringMode": "HASH"
+    }, 
+    "columnsSelection": {
+      "mode": "ALL"
+    }, 
+    "explorationFilters": [], 
+    "explorationSampling": {
+      "_refreshTrigger": 2, 
+      "autoRefreshSample": false, 
+      "selection": {
+        "maxRecords": 30000, 
+        "partitionSelectionMethod": "ALL", 
+        "samplingMethod": "HEAD_SEQUENTIAL", 
+        "targetRatio": 0.02
+      }
+    }, 
+    "exploreUIParams": {
+      "autoRefresh": true
+    }, 
+    "globalSearchQuery": "", 
+    "previewMode": "ALL_ROWS", 
+    "steps": [
+      {
+        "alwaysShowComment": false, 
+        "disabled": false, 
+        "metaType": "PROCESSOR", 
+        "params": {
+          "extract_city": false, 
+          "extract_continentcode": false, 
+          "extract_country": true, 
+          "extract_countrycode": false, 
+          "extract_countrycode3": false, 
+          "extract_geopoint": false, 
+          "extract_latlng": false, 
+          "extract_postalcode": false, 
+          "extract_region": false, 
+          "extract_timezone": false, 
+          "inCol": "ip", 
+          "outColPrefix": "ip_"
+        }, 
+        "preview": false, 
+        "type": "GeoIPResolver"
+      }
+    ], 
+    "tags": [], 
+    "vizSampling": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false
+    }
+  }, 
+  "tags": [
+    "Model creation", 
+    "Model assessment", 
+    "Features preparation"
+  ], 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1458843388981, 
+    "versionNumber": 21
+  }
+}

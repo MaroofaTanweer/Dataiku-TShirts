@@ -1,0 +1,51 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "description": "### Process explained\n\nThis recipe\n\n- __computes the age__ of each customer with their birthdate\n- __clears the age cell__ for each customers when the age data is a none sense (people can't be 114 years old and buying TShirt on internet)\n- __merges historical customers navigational data__ with CRM data\n- __extracts the country__ of each customer knowing his IP address", 
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "deps": [], 
+          "ref": "crm_history"
+        }
+      ]
+    }, 
+    "scriptDeps": {
+      "items": [
+        {
+          "deps": [], 
+          "ref": "web_history"
+        }
+      ]
+    }
+  }, 
+  "neverRecomputeExistingPartitions": false, 
+  "optionalDependencies": false, 
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "appendMode": false, 
+          "ref": "crm_and_web_history_enriched"
+        }
+      ]
+    }
+  }, 
+  "params": {
+    "engineType": "DSS", 
+    "hadoopConfigKeys": []
+  }, 
+  "redispatchPartitioning": false, 
+  "tags": [], 
+  "type": "shaker", 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1461924340253, 
+    "versionNumber": 2
+  }
+}

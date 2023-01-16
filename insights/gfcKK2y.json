@@ -1,0 +1,32 @@
+{
+  "type": "jupyter",
+  "params": {
+    "notebookSmartName": "Custom report on predicted revenue",
+    "exportTimestamp": 0,
+    "loadLast": true
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Predicted revenue in the U.S.",
+  "dashboardCreationId": "U6v9FZ6",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061738
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061738
+  },
+  "description": "This is a very simple report about the US generated revenue created with python notebook.",
+  "shortDesc": "",
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

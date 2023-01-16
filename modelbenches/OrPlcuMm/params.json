@@ -1,0 +1,208 @@
+{
+  "core_params": {
+    "target_variable": "revenue",
+    "prediction_type": "regression",
+    "crossval": {
+      "samprate": 0.8
+    },
+    "input": {
+      "datasetProjectKey": "DATAIKU_TSHIRTS",
+      "dataset": "web_history_enriched"
+    }
+  },
+  "modeling_params": {
+    "random_forest_regression": {
+      "enabled": true,
+      "n_estimators": [
+        100
+      ],
+      "n_jobs": 6,
+      "max_tree_depth": 0,
+      "min_samples_leaf": 3
+    },
+    "ridge_regression": {
+      "enabled": true
+    },
+    "lasso_regression": {
+      "enabled": true
+    },
+    "leastsquare_regression": {
+      "enabled": true
+    },
+    "random_forest_classification": {
+      "enabled": false,
+      "n_jobs": 1,
+      "max_tree_depth": 8,
+      "min_samples_leaf": 3
+    },
+    "logistic_regression": {
+      "enabled": false,
+      "l1": false,
+      "l2": false,
+      "C": [
+        1.0
+      ]
+    },
+    "svc_classifier": {
+      "enabled": false,
+      "C": [
+        1.0
+      ],
+      "gamma": [
+        0.0
+      ],
+      "linear": false,
+      "poly": false,
+      "rbf": false,
+      "sigmoid": false,
+      "coef0": 0.0,
+      "tol": 0.001,
+      "max_iter": -1
+    },
+    "sgd_classifier": {
+      "enabled": false,
+      "log": false,
+      "modified_huber": false,
+      "l2": false,
+      "l1": false,
+      "elasticnet": false,
+      "alpha": 0.0,
+      "l1_ratio": 0.15,
+      "n_jobs": 1
+    }
+  },
+  "preprocessing_params": {
+    "per_feature": {
+      "pages_visited": {
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MEDIAN",
+        "name": "pages_visited",
+        "rescaling": false,
+        "role": "INPUT",
+        "type": "NUMERIC"
+      },
+      "revenue": {
+        "name": "revenue",
+        "rescaling": false,
+        "role": "TARGET",
+        "type": "NUMERIC"
+      },
+      "ip": {
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "ip",
+        "rescaling": false,
+        "role": "REJECT",
+        "role_reason": "CATEGORY_CARDINALITY",
+        "type": "CATEGORY"
+      },
+      "campain": {
+        "category_handling": "DUMMIFY",
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "campain",
+        "rescaling": false,
+        "role": "INPUT",
+        "type": "CATEGORY"
+      },
+      "ip_country": {
+        "category_handling": "DUMMIFY",
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "ip_country",
+        "rescaling": false,
+        "role": "INPUT",
+        "role_reason": "CATEGORY_CARDINALITY",
+        "type": "CATEGORY"
+      },
+      "customer_id": {
+        "missing_handling": "IMPUTE",
+        "missing_impute_with": "MODE",
+        "name": "customer_id",
+        "rescaling": false,
+        "role": "REJECT",
+        "role_reason": "CATEGORY_CARDINALITY",
+        "type": "CATEGORY"
+      }
+    },
+    "reduce": {
+      "enable": false,
+      "disable": true,
+      "kept_variance": 0.95
+    },
+    "deduplication": {
+      "enabled": false,
+      "deduplicate_on": "pages_visited"
+    }
+  },
+  "type": "prediction",
+  "metadata": {
+    "name": "Predict revenue using historical navigational data on the web site",
+    "description": "### Explanation \n\nUsing only navigational data gathered during the first purchase of customers, we try to predict the monthly revenue he will generate.\n\n### Stragegy\n\n1. We construct in this bench the [best predictive model](/projects/DATAIKU_TSHIRTS/modelbenches/prediction/OrPlcuMm/results/) based on historical data that we have previously processed. \n2. Once this model built, we will [update it frequently](/projects/DATAIKU_TSHIRTS/flow/) with the most recent data to get prediction that corresponds to latest customers trends.\n3. This updated model will then be used to [predict the monthly revenue on the new customers](/projects/DATAIKU_TSHIRTS/datasets/predicted_revenue/explore/).",
+    "tags": [
+      "Machine Learning",
+      "Regression",
+      "Revenue Prediction",
+      "Best model"
+    ]
+  },
+  "sample_guess_stats": {
+    "nrows": 29799,
+    "features": {
+      "pages_visited": {
+        "cardinality": 14,
+        "data_type": "float64",
+        "sample_values": "2.0; 6.0; 5.0; 4.0; 3.0",
+        "role": "INPUT",
+        "variable": "pages_visited",
+        "missings": 0,
+        "type": "NUMERIC"
+      },
+      "revenue": {
+        "cardinality": 459,
+        "data_type": "float64",
+        "sample_values": "149.0; 241.0; 233.0; 231.0; 185.0",
+        "role": "INPUT",
+        "variable": "revenue",
+        "missings": 0,
+        "type": "NUMERIC"
+      },
+      "ip": {
+        "cardinality": 29799,
+        "data_type": "object",
+        "sample_values": "137.136.24.131; 138.210.203.174; 180.146.226.87; 96.35.80.144; 131.188.76.70",
+        "role": "INPUT",
+        "variable": "ip",
+        "missings": 0,
+        "type": "CATEGORY"
+      },
+      "campain": {
+        "cardinality": 2,
+        "data_type": "object",
+        "sample_values": "false; true",
+        "role": "INPUT",
+        "variable": "campain",
+        "missings": 0,
+        "type": "CATEGORY"
+      },
+      "ip_country": {
+        "cardinality": 131,
+        "data_type": "object",
+        "sample_values": "united states; japan; germany; brazil; france",
+        "role": "INPUT",
+        "variable": "ip_country",
+        "missings": 0,
+        "type": "CATEGORY"
+      },
+      "customer_id": {
+        "cardinality": 27347,
+        "data_type": "object",
+        "sample_values": "a4dc1548af; e8f6f7853c; 5802162c20; 67dc195843; 7c52e0eab6",
+        "role": "INPUT",
+        "variable": "customer_id",
+        "missings": 0,
+        "type": "CATEGORY"
+      }
+    }
+  }
+}

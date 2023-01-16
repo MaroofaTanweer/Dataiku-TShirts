@@ -1,0 +1,28 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "Vs6j4B8H"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "model_web_history_prepared table",
+  "dashboardCreationId": "U6v9FZ6",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061739
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1486128061739
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

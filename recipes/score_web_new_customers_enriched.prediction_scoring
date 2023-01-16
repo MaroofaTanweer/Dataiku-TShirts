@@ -1,0 +1,14 @@
+{
+    "outputProbabilities": true, 
+    "keptInputColumns": [], 
+    "overrideModelSpecifiedThreshold": false, 
+    "filterInputColumns": false, 
+    "sparkParams": {
+        "pipelineAllowStart": null, 
+        "sparkPreparedDFStorageLevel": null, 
+        "sparkConf": null, 
+        "sparkRepartitionNonHDFS": null, 
+        "pipelineAllowMerge": null
+    }, 
+    "forcedClassifierThreshold": 0
+}

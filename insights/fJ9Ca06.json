@@ -1,0 +1,122 @@
+{
+  "checklists": {}, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1400750931268
+  }, 
+  "description": "", 
+  "listed": true, 
+  "name": "Count by age", 
+  "owner": "admin", 
+  "params": {
+    "datasetSmartName": "crm_and_web_history_enriched", 
+    "def": {
+      "axis1LogScale": false, 
+      "axis2LogScale": false, 
+      "boxplotBreakdownDim": [], 
+      "boxplotValue": [], 
+      "bubblesOptions": {
+        "defaultRadius": 5.0
+      }, 
+      "colorMeasure": [], 
+      "colorOptions": {
+        "ccScaleMode": "NORMAL", 
+        "colorPalette": "default", 
+        "singleColor": "#659a88", 
+        "transparency": 0.9
+      }, 
+      "disableSafetyLimits": false, 
+      "filters": [
+        {
+          "column": "age", 
+          "columnType": "NUMERICAL", 
+          "excludedValues": {}, 
+          "explicitExclude": false, 
+          "filterType": "NUMERICAL_FACET", 
+          "isA": "filter", 
+          "minValue": -15.38
+        }
+      ], 
+      "genericDimension0": [
+        {
+          "column": "age", 
+          "filters": [], 
+          "generateOthersCategory": true, 
+          "isA": "dimension", 
+          "maxValues": 100, 
+          "numParams": {
+            "binSize": 1, 
+            "emptyBinsMode": "ZEROS", 
+            "mode": "FIXED_SIZE", 
+            "nbBins": 10
+          }, 
+          "oneTickPerBin": false, 
+          "sort": {
+            "label": "Natural ordering", 
+            "sortAscending": true, 
+            "type": "NATURAL"
+          }, 
+          "type": "NUMERICAL"
+        }
+      ], 
+      "genericDimension1": [], 
+      "genericMeasures": [
+        {
+          "computeMode": "NORMAL", 
+          "displayAxis": "axis1", 
+          "displayType": "column", 
+          "displayed": true, 
+          "function": "COUNT", 
+          "isA": "measure", 
+          "type": "NUMERICAL"
+        }
+      ], 
+      "geometry": [], 
+      "groupDimension": [], 
+      "hexbinRadius": 20, 
+      "includeZero": true, 
+      "mapGridOptions": {
+        "gridLatDeg": 0.6, 
+        "gridLonDeg": 0.6
+      }, 
+      "mapOptions": {
+        "lockSquareGrid": false, 
+        "tilesLayer": "mapquest-std"
+      }, 
+      "name": "Count by age", 
+      "showLegend": false, 
+      "sizeMeasure": [], 
+      "smoothing": false, 
+      "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACfUlEQVRoQ+2ZP2gUQRTG3zebk5PYWAkWG7ATTCFaChYWomZzjSiIYCOonWAuwcbCLndiq4WNIAGDIOaih4WFnYVgEUFshNtCEAQLPQxedp7McRP2dHM7mzOzizvbbLGz8+b3vvfe/AOV7ME4vFMLq587izP79Xucvmz964BNPK0U1e1KoXAfmHmdgGpEcs4jcUeB+/OtE2EjeGXitLzabCuk48DxgbPkh2EzuJkXjIldB2ziJafwwEsupE3CxXKbzDns11srEDiqq/SfRQsCl1TFtsxhbM4Bp7nKRGEmeT1cnF1O6yuP7zuiMPWiM527tXd5AKXZdMCjPKTmX5b8Nq1o/TcKO2CgmjQtKYWp4j0v4vSUKYezKKyBi3Y4YAzsL7SPgaJl0xxWwER0loieFElpB7xVlXYKD048RhUtF9JpyyAL363kMDM/CxvBNQs8qSasAQOoxUejK7c/37pn0xlGwP35l7xz252WlMIDYElEYijvLaufJ3Af3na4FwJYqW9rcVIYYIAvMGNJ77T8+uqtsDlzO7UKZWzggJMctkNFazOHVUjHFVbrcJZ0vzQKa2AIuvqvc7uQIV1q4Pi1bMb6lNi88AqXFrgPzrzeaQQHxlF6pML+3MqVjR7alSre/LW0TLCqLtPUVYs+09Lbwy2WlqlVWhWtITN6Syr5Yxdy9muj9j0r/BCwf+PpEYiJw6oTsFhjyOku5ONJFucl5AvB4jQL+gJJ+5IMMckPIHEwInrtER2PNn62vYndp4j5EwHJygy+9aJdLyver5Ob/3K05sGbTgbib0TYq8eEyT2PuPvjIsDvmXGo0wweTNVbl+Nv3Y9RDmf1YpHb/wYUPapWpsYnrAAAAABJRU5ErkJggg==", 
+      "tooltipMeasures": [], 
+      "type": "multi_columns_lines", 
+      "uaColor": [], 
+      "uaSize": [], 
+      "uaTooltip": [], 
+      "uaXDimension": [], 
+      "uaYDimension": [], 
+      "useLiveProcessingIfAvailable": true, 
+      "userEditedName": true, 
+      "variant": "normal", 
+      "xDimension": [], 
+      "xMeasure": [], 
+      "yDimension": [], 
+      "yMeasure": []
+    }, 
+    "refreshableSelection": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false, 
+      "selection": {
+        "maxRecords": 30000, 
+        "partitionSelectionMethod": "ALL", 
+        "samplingMethod": "HEAD_SEQUENTIAL", 
+        "targetRatio": 0.02
+      }
+    }
+  }, 
+  "shortDesc": "", 
+  "tags": [], 
+  "type": "chart"
+}

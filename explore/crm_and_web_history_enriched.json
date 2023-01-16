@@ -1,0 +1,502 @@
+{
+  "charts": [
+    {
+      "def": {
+        "axis1LogScale": false, 
+        "axis2LogScale": false, 
+        "boxplotBreakdownDim": [], 
+        "boxplotValue": [], 
+        "bubblesOptions": {
+          "defaultRadius": 36.0
+        }, 
+        "colorMeasure": [], 
+        "colorOptions": {
+          "ccScaleMode": "NORMAL", 
+          "colorPalette": "default", 
+          "singleColor": "#659a88", 
+          "transparency": 0.9
+        }, 
+        "disableSafetyLimits": false, 
+        "filters": [], 
+        "genericDimension0": [], 
+        "genericDimension1": [], 
+        "genericMeasures": [], 
+        "geometry": [], 
+        "groupDimension": [
+          {
+            "column": "ip_country", 
+            "filters": [], 
+            "generateOthersCategory": true, 
+            "isA": "dimension", 
+            "maxValues": 200, 
+            "oneTickPerBin": false, 
+            "sort": {
+              "label": "Natural ordering", 
+              "sortAscending": true, 
+              "type": "NATURAL"
+            }, 
+            "type": "ALPHANUM"
+          }
+        ], 
+        "hexbinRadius": 20, 
+        "includeZero": true, 
+        "mapGridOptions": {
+          "gridLatDeg": 0.6, 
+          "gridLonDeg": 0.6
+        }, 
+        "mapOptions": {
+          "lockSquareGrid": false, 
+          "tilesLayer": "mapquest-std"
+        }, 
+        "name": "Count by ip_country", 
+        "showLegend": false, 
+        "sizeMeasure": [
+          {
+            "column": "revenue", 
+            "displayAxis": "axis1", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "SUM", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }
+        ], 
+        "smoothing": false, 
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAADPUlEQVRoQ+2XT2jTYBTA31tbV1R2kKFMZc6DKCIIguBBQS/CQBBEBUWlbmlTGewwmGum0+Kh6XAIIrJmyTYVvLirIIwhHjwPJ3pzHvwz3JxjTnD2X54ka0pbuvb7OjdMl5xa8r73vd/7vXwkCOvswnXGCw5wtRt3DDuGq6wDVTPSvofyYVc8PjnYEZ4r5cj2wH5FnioEJNA1Tbxxqxi4rYGLwVqQBDChiVJzIbRtgUvBWpBpwuahYGgiF9qWwJf7b2/11njfsJynqihttz0wi93saOtwUbsmvbL+MxkWFLlTE6W7LB1dixgeYABIqqK0iwv4ihJtfCKGPq0FTLk9rsYi+92IY+Xicu/njjWT4ZaYHBwKSjEria9fbkoQ/Nzkxvek00stKF3iKWAlsUIsMoqIB3hycAMLau+ZVDI55Xa5goB4GggSiFAPANPmxgTjqhg6xVNEpbGc42xuk3bX7B1q7fpl/GYyLAxEdQRAAiQEQgIgNDAJ4oAwbyRSA6G807BSoHLrKgFOeejgcEv3dx5gAxCIADDToix0xvL/DJxMuQ49arv+jRnYPxClZTqvW2NNAHMIsIWIRjVR8pUzVen9Sgz/jsf3PW0PLzADC4psuDUfVswoNgwDgDHqM4RQhwRmQuP68ufr7hftD+KVQpVaJ8QiHxBxI09uVZR2mMWzPsOG4WLjTAQziGaibdkDbCnzOy0QOslTFGtsixI96gJ6xhpvni85b1tsh5Yi05JZWiCARQTUCcCDAEnzkCbYgAiJ3CJW85nmHWtu4IzhJCLMApGuitJOA05Qe8+mEouvPR7veH7HMaEGupp4LPDEcgET3FFz3iGYDPuVaBoQphOUPPZY7JksLM4/EM37JtUB7g0GQn08EDyxrYp8rgbgPsuaVfl4uNAXrt9c531rFbCa42ztwWSZ6Lka7A7kNobJMEsnBbX3COr6+fmx8c6RkZE0y5qVxBwPh917GmpLvd/nfTRYe/0z4JUUX+laXzjs9TTUfixcTwApTZQai+W1NXB2vGORDgA8QUg/0im9Z7jt5uflmlgVwDwT4gDzdMuOsY5hO1rjqdkxzNMtO8Y6hu1ojadmxzBPt+wY+xdAGSo4H7zRhAAAAABJRU5ErkJggg==", 
+        "tooltipMeasures": [], 
+        "type": "grouped_xy", 
+        "uaColor": [], 
+        "uaSize": [], 
+        "uaTooltip": [], 
+        "uaXDimension": [], 
+        "uaYDimension": [], 
+        "useLiveProcessingIfAvailable": true, 
+        "userEditedName": true, 
+        "variant": "normal", 
+        "xDimension": [], 
+        "xMeasure": [
+          {
+            "displayAxis": "axis1", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "COUNT", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }
+        ], 
+        "yDimension": [], 
+        "yMeasure": [
+          {
+            "column": "revenue", 
+            "displayAxis": "axis1", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "AVG", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }
+        ]
+      }, 
+      "refreshableSelection": {
+        "_refreshTrigger": 0, 
+        "autoRefreshSample": false, 
+        "selection": {
+          "maxRecords": 30000, 
+          "partitionSelectionMethod": "ALL", 
+          "samplingMethod": "HEAD_SEQUENTIAL", 
+          "targetRatio": 0.02
+        }
+      }
+    }, 
+    {
+      "def": {
+        "axis1LogScale": false, 
+        "axis2LogScale": false, 
+        "boxplotBreakdownDim": [], 
+        "boxplotValue": [], 
+        "bubblesOptions": {
+          "defaultRadius": 5.0
+        }, 
+        "colorMeasure": [], 
+        "colorOptions": {
+          "ccScaleMode": "NORMAL", 
+          "colorPalette": "default", 
+          "singleColor": "#659a88", 
+          "transparency": 0.9
+        }, 
+        "disableSafetyLimits": false, 
+        "filters": [], 
+        "genericDimension0": [
+          {
+            "column": "gender", 
+            "filters": [], 
+            "generateOthersCategory": true, 
+            "isA": "dimension", 
+            "maxValues": 20, 
+            "numParams": {
+              "emptyBinsMode": "ZEROS"
+            }, 
+            "oneTickPerBin": false, 
+            "sort": {
+              "label": "Count of records, descending", 
+              "measureIdx": 0, 
+              "type": "AGGREGATION"
+            }, 
+            "type": "ALPHANUM"
+          }
+        ], 
+        "genericDimension1": [], 
+        "genericMeasures": [
+          {
+            "computeMode": "NORMAL", 
+            "displayAxis": "axis1", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "COUNT", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }
+        ], 
+        "geometry": [], 
+        "groupDimension": [], 
+        "hexbinRadius": 20, 
+        "includeZero": true, 
+        "mapGridOptions": {
+          "gridLatDeg": 0.6, 
+          "gridLonDeg": 0.6
+        }, 
+        "mapOptions": {
+          "lockSquareGrid": false, 
+          "tilesLayer": "mapquest-std"
+        }, 
+        "name": "Count by gender", 
+        "showLegend": false, 
+        "sizeMeasure": [], 
+        "smoothing": false, 
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAu0lEQVRoQ+2XwQ1AQBBFZxNVcFCCRvSzNaiHRD0u6pBwIuTbhLGJ5zq7G/Nn//sE+9kTUvut4zCrPVPXlmrNV3UaVsoz4ROFuNLq2jjW8bASGw/jYTOgpXziWAdaSmygBbSAlnKJax1oKbmBFtACWsolp/Uq9k1hYVSbUz9js4UWDV+MmgkLD3ClFSS8chgP4+FNAaAFtPYKQGkofVCAWHrp95AcJofJYcXbtZ4cS7dOzXgRDWc8nEdebQEjSdQpfAF1SQAAAABJRU5ErkJggg==", 
+        "tooltipMeasures": [], 
+        "type": "multi_columns_lines", 
+        "uaColor": [], 
+        "uaSize": [], 
+        "uaTooltip": [], 
+        "uaXDimension": [], 
+        "uaYDimension": [], 
+        "useLiveProcessingIfAvailable": true, 
+        "userEditedName": true, 
+        "variant": "normal", 
+        "xDimension": [], 
+        "xMeasure": [], 
+        "yDimension": [], 
+        "yMeasure": []
+      }, 
+      "refreshableSelection": {
+        "_refreshTrigger": 0, 
+        "autoRefreshSample": false, 
+        "selection": {
+          "maxRecords": 30000, 
+          "partitionSelectionMethod": "ALL", 
+          "samplingMethod": "HEAD_SEQUENTIAL", 
+          "targetRatio": 0.02
+        }
+      }
+    }, 
+    {
+      "def": {
+        "axis1LogScale": false, 
+        "axis2LogScale": false, 
+        "boxplotBreakdownDim": [], 
+        "boxplotValue": [], 
+        "bubblesOptions": {
+          "defaultRadius": 5.0
+        }, 
+        "colorMeasure": [], 
+        "colorOptions": {
+          "ccScaleMode": "NORMAL", 
+          "colorPalette": "default", 
+          "singleColor": "#659a88", 
+          "transparency": 0.9
+        }, 
+        "disableSafetyLimits": false, 
+        "filters": [], 
+        "genericDimension0": [
+          {
+            "column": "gender", 
+            "filters": [], 
+            "generateOthersCategory": true, 
+            "isA": "dimension", 
+            "maxValues": 20, 
+            "numParams": {
+              "emptyBinsMode": "ZEROS"
+            }, 
+            "oneTickPerBin": false, 
+            "sort": {
+              "label": "Count of records, descending", 
+              "measureIdx": 0, 
+              "type": "AGGREGATION"
+            }, 
+            "type": "ALPHANUM"
+          }
+        ], 
+        "genericDimension1": [], 
+        "genericMeasures": [
+          {
+            "computeMode": "NORMAL", 
+            "displayAxis": "axis1", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "COUNT", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }, 
+          {
+            "column": "revenue", 
+            "computeMode": "NORMAL", 
+            "displayAxis": "axis2", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "AVG", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }
+        ], 
+        "geometry": [], 
+        "groupDimension": [], 
+        "hexbinRadius": 20, 
+        "includeZero": true, 
+        "mapGridOptions": {
+          "gridLatDeg": 0.6, 
+          "gridLonDeg": 0.6
+        }, 
+        "mapOptions": {
+          "lockSquareGrid": false, 
+          "tilesLayer": "mapquest-std"
+        }, 
+        "name": "Count by gender", 
+        "showLegend": false, 
+        "sizeMeasure": [], 
+        "smoothing": false, 
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAzUlEQVRoQ+2YwQ2DQAwEly5QPjSRF01ESjOUkU7ySg0pBVFGhHhxeSyWoouB4YnMCds7K/sanexpovl2w2ssv3ncrqtX9769RM+tFU/CrtJ0WFItST/f0xdOUXx2JWkSlkSHjQkh6cwuDcMw7PQpwbCr0T8nLRiGYadPGPYVgmG2pfhA73W1RBzepUt8yr17LsKhtiUSLi4L6fAGM0g9SyNpJI1LW4ph2JWo5iyNaWFamJYjMvclHgzDMAz/nmF7YvKA8KSVPB/7e6dL+AOJlRQ4PQZd8AAAAABJRU5ErkJggg==", 
+        "tooltipMeasures": [], 
+        "type": "multi_columns_lines", 
+        "uaColor": [], 
+        "uaSize": [], 
+        "uaTooltip": [], 
+        "uaXDimension": [], 
+        "uaYDimension": [], 
+        "useLiveProcessingIfAvailable": true, 
+        "userEditedName": true, 
+        "variant": "normal", 
+        "xDimension": [], 
+        "xMeasure": [], 
+        "yDimension": [], 
+        "yMeasure": []
+      }, 
+      "refreshableSelection": {
+        "_refreshTrigger": 7, 
+        "autoRefreshSample": false, 
+        "selection": {
+          "maxRecords": 30000, 
+          "partitionSelectionMethod": "ALL", 
+          "samplingMethod": "HEAD_SEQUENTIAL", 
+          "targetRatio": 0.02
+        }
+      }
+    }, 
+    {
+      "def": {
+        "axis1LogScale": false, 
+        "axis2LogScale": false, 
+        "boxplotBreakdownDim": [], 
+        "boxplotValue": [], 
+        "bubblesOptions": {
+          "defaultRadius": 5.0
+        }, 
+        "colorMeasure": [], 
+        "colorOptions": {
+          "ccScaleMode": "NORMAL", 
+          "colorPalette": "default", 
+          "singleColor": "#659a88", 
+          "transparency": 0.9
+        }, 
+        "disableSafetyLimits": false, 
+        "filters": [], 
+        "genericDimension0": [
+          {
+            "column": "gender", 
+            "filters": [], 
+            "generateOthersCategory": true, 
+            "isA": "dimension", 
+            "maxValues": 20, 
+            "numParams": {
+              "emptyBinsMode": "ZEROS"
+            }, 
+            "oneTickPerBin": false, 
+            "sort": {
+              "label": "Average of revenue, descending", 
+              "measureIdx": 0, 
+              "type": "AGGREGATION"
+            }, 
+            "type": "ALPHANUM"
+          }
+        ], 
+        "genericMeasures": [
+          {
+            "column": "revenue", 
+            "displayAxis": "axis1", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "AVG", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }
+        ], 
+        "geometry": [], 
+        "groupDimension": [], 
+        "hexbinRadius": 0, 
+        "includeZero": true, 
+        "mapGridOptions": {
+          "gridLatDeg": 0.6, 
+          "gridLonDeg": 0.6
+        }, 
+        "mapOptions": {
+          "lockSquareGrid": false, 
+          "tilesLayer": "mapquest-std"
+        }, 
+        "name": "Avg. of revenue by gender", 
+        "showLegend": false, 
+        "sizeMeasure": [], 
+        "smoothing": false, 
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAuUlEQVRoQ+2Yuw2AMAwFHdGxRCTmoWUWZmAVahZiDyRo+QQs84kscbQhUfwc+14S5GdfMMXb9EWsykmbM3a1bV1twRfHbRsj4LT0ZPjmkYztMGtTreK6PtIEnEg3GVZqgCN9KVBmLFHD1LAITYumtVWALk2XXisAlr69LcFhOAyHteuzgCWwBJbyPdOCJbAElsDSXgE4DIfhMBw+VIH1JfGsjDAeGA+MB8bjmfFQ9fP/g81p+Y9H3eEC7/AcODLJRzsAAAAASUVORK5CYII=", 
+        "tooltipMeasures": [], 
+        "type": "multi_columns_lines", 
+        "uaColor": [], 
+        "uaSize": [], 
+        "uaTooltip": [], 
+        "uaXDimension": [], 
+        "uaYDimension": [], 
+        "useLiveProcessingIfAvailable": true, 
+        "userEditedName": true, 
+        "variant": "normal", 
+        "xDimension": [], 
+        "xMeasure": [], 
+        "yDimension": [], 
+        "yMeasure": []
+      }, 
+      "refreshableSelection": {
+        "_refreshTrigger": 0, 
+        "autoRefreshSample": false, 
+        "selection": {
+          "maxRecords": 30000, 
+          "partitionSelectionMethod": "ALL", 
+          "samplingMethod": "HEAD_SEQUENTIAL", 
+          "targetRatio": 0.02
+        }
+      }
+    }, 
+    {
+      "def": {
+        "axis1LogScale": false, 
+        "axis2LogScale": false, 
+        "boxplotBreakdownDim": [], 
+        "boxplotValue": [], 
+        "bubblesOptions": {
+          "defaultRadius": 5.0
+        }, 
+        "colorMeasure": [], 
+        "colorOptions": {
+          "ccScaleMode": "NORMAL", 
+          "colorPalette": "default", 
+          "singleColor": "#659a88", 
+          "transparency": 0.9
+        }, 
+        "disableSafetyLimits": false, 
+        "filters": [
+          {
+            "column": "age", 
+            "columnType": "NUMERICAL", 
+            "excludedValues": {}, 
+            "explicitExclude": false, 
+            "filterType": "NUMERICAL_FACET", 
+            "isA": "filter", 
+            "minValue": -15.38
+          }
+        ], 
+        "genericDimension0": [
+          {
+            "column": "age", 
+            "filters": [], 
+            "generateOthersCategory": true, 
+            "isA": "dimension", 
+            "maxValues": 100, 
+            "numParams": {
+              "binSize": 1, 
+              "emptyBinsMode": "ZEROS", 
+              "mode": "FIXED_SIZE", 
+              "nbBins": 10
+            }, 
+            "oneTickPerBin": false, 
+            "sort": {
+              "label": "Natural ordering", 
+              "sortAscending": true, 
+              "type": "NATURAL"
+            }, 
+            "type": "NUMERICAL"
+          }
+        ], 
+        "genericDimension1": [], 
+        "genericMeasures": [
+          {
+            "computeMode": "NORMAL", 
+            "displayAxis": "axis1", 
+            "displayType": "column", 
+            "displayed": true, 
+            "function": "COUNT", 
+            "isA": "measure", 
+            "type": "NUMERICAL"
+          }
+        ], 
+        "geometry": [], 
+        "groupDimension": [], 
+        "hexbinRadius": 20, 
+        "includeZero": true, 
+        "mapGridOptions": {
+          "gridLatDeg": 0.6, 
+          "gridLonDeg": 0.6
+        }, 
+        "mapOptions": {
+          "lockSquareGrid": false, 
+          "tilesLayer": "mapquest-std"
+        }, 
+        "name": "Count by age", 
+        "showLegend": false, 
+        "sizeMeasure": [], 
+        "smoothing": false, 
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACfUlEQVRoQ+2ZP2gUQRTG3zebk5PYWAkWG7ATTCFaChYWomZzjSiIYCOonWAuwcbCLndiq4WNIAGDIOaih4WFnYVgEUFshNtCEAQLPQxedp7McRP2dHM7mzOzizvbbLGz8+b3vvfe/AOV7ME4vFMLq587izP79Xucvmz964BNPK0U1e1KoXAfmHmdgGpEcs4jcUeB+/OtE2EjeGXitLzabCuk48DxgbPkh2EzuJkXjIldB2ziJafwwEsupE3CxXKbzDns11srEDiqq/SfRQsCl1TFtsxhbM4Bp7nKRGEmeT1cnF1O6yuP7zuiMPWiM527tXd5AKXZdMCjPKTmX5b8Nq1o/TcKO2CgmjQtKYWp4j0v4vSUKYezKKyBi3Y4YAzsL7SPgaJl0xxWwER0loieFElpB7xVlXYKD048RhUtF9JpyyAL363kMDM/CxvBNQs8qSasAQOoxUejK7c/37pn0xlGwP35l7xz252WlMIDYElEYijvLaufJ3Af3na4FwJYqW9rcVIYYIAvMGNJ77T8+uqtsDlzO7UKZWzggJMctkNFazOHVUjHFVbrcJZ0vzQKa2AIuvqvc7uQIV1q4Pi1bMb6lNi88AqXFrgPzrzeaQQHxlF6pML+3MqVjR7alSre/LW0TLCqLtPUVYs+09Lbwy2WlqlVWhWtITN6Syr5Yxdy9muj9j0r/BCwf+PpEYiJw6oTsFhjyOku5ONJFucl5AvB4jQL+gJJ+5IMMckPIHEwInrtER2PNn62vYndp4j5EwHJygy+9aJdLyver5Ob/3K05sGbTgbib0TYq8eEyT2PuPvjIsDvmXGo0wweTNVbl+Nv3Y9RDmf1YpHb/wYUPapWpsYnrAAAAABJRU5ErkJggg==", 
+        "tooltipMeasures": [], 
+        "type": "multi_columns_lines", 
+        "uaColor": [], 
+        "uaSize": [], 
+        "uaTooltip": [], 
+        "uaXDimension": [], 
+        "uaYDimension": [], 
+        "useLiveProcessingIfAvailable": true, 
+        "userEditedName": true, 
+        "variant": "normal", 
+        "xDimension": [], 
+        "xMeasure": [], 
+        "yDimension": [], 
+        "yMeasure": []
+      }, 
+      "refreshableSelection": {
+        "_refreshTrigger": 0, 
+        "autoRefreshSample": false, 
+        "selection": {
+          "maxRecords": 30000, 
+          "partitionSelectionMethod": "ALL", 
+          "samplingMethod": "HEAD_SEQUENTIAL", 
+          "targetRatio": 0.02
+        }
+      }
+    }
+  ]
+}

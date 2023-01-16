@@ -1,0 +1,141 @@
+{
+  "charts": [
+    {
+      "copySelectionFromScript": true, 
+      "def": {
+        "colorOptions": {
+          "colorPalette": "default", 
+          "singleColor": "#659a88", 
+          "transparency": 0.9
+        }, 
+        "filters": [], 
+        "genericMeasures": [], 
+        "includeZero": true, 
+        "name": "Chart", 
+        "showLegend": true, 
+        "smoothing": true, 
+        "type": "multi_columns_lines", 
+        "userEditedName": true, 
+        "variant": "normal"
+      }
+    }
+  ], 
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1430751548241, 
+    "versionNumber": 0
+  }, 
+  "description": "## KEY FACTORS IMPACTING REVENUE\n\n1. Predictive intelligence is using artificial intelligence models to get insights from the data.\n\n2. Business people can that way learn the key factors impacting a chosen target and make further analysis.<br/>\nHere few [models](/projects/DKU_TSHIRTS/analysis/xXTYPWEJ/ml/) have been trained to \"learn\" revenue.\n\n3.  Look at the [Tree](/projects/DKU_TSHIRTS/analysis/xXTYPWEJ/ml/p/r3Jhr1Jr/A-DKU_TSHIRTS-xXTYPWEJ-r3Jhr1Jr-s6-pp1-m1/report/#ensemble_summary) of a simple rules model or at the [variables importance](/projects/DKU_TSHIRTS/analysis/xXTYPWEJ/ml/p/r3Jhr1Jr/A-DKU_TSHIRTS-xXTYPWEJ-r3Jhr1Jr-s6-pp1-m1/report/#variables_importance) of the best model to get an idea of the important factors.", 
+  "inputDatasetSmartName": "crm_and_web_history_enriched", 
+  "name": "Audit CRM by predicting revenue on all data", 
+  "script": {
+    "analysisColumnData": {}, 
+    "charts": [
+      {
+        "$$hashKey": "0DT", 
+        "chartOptions": {
+          "computeOptionsDisplayed": false, 
+          "enabledComputeModes": [
+            {
+              "label": "No computation", 
+              "shortLabel": "None", 
+              "value": "NONE"
+            }
+          ], 
+          "enabledXAxisModes": [
+            {
+              "label": "Normal", 
+              "shortLabel": "Normal", 
+              "value": "NORMAL"
+            }, 
+            {
+              "label": "Cumulative values", 
+              "shortLabel": "Cumulative", 
+              "value": "CUMULATIVE"
+            }
+          ], 
+          "enabledYAxisModes": [
+            {
+              "label": "Normal", 
+              "shortLabel": "Normal", 
+              "value": "NORMAL"
+            }, 
+            {
+              "label": "Logarithmic scale", 
+              "shortLabel": "Log", 
+              "value": "LOG"
+            }
+          ], 
+          "hAxisOptionsDisplayed": true, 
+          "legendChoice": true, 
+          "smoothingChoice": false, 
+          "vAxisOptionsDisplayed": true, 
+          "zeroEnabled": true
+        }, 
+        "data": {
+          "colorOptions": {
+            "colorPalette": "default", 
+            "singleColor": "#659a88", 
+            "transparency": 0.9
+          }, 
+          "filters": [], 
+          "genericMeasures": [], 
+          "includeZero": true, 
+          "name": "Chart", 
+          "showLegend": true, 
+          "smoothing": true, 
+          "type": "multi_columns_lines", 
+          "userEditedName": true, 
+          "variant": "normal"
+        }
+      }
+    ], 
+    "chartsEngine": "LINO", 
+    "coloring": {
+      "individualColumns": [], 
+      "scheme": "MEANING_AND_STATUS", 
+      "valueColoringMode": "HASH"
+    }, 
+    "columnsSelection": {
+      "mode": "ALL"
+    }, 
+    "explorationFilters": [], 
+    "explorationSampling": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false, 
+      "selection": {
+        "maxRecords": 30000, 
+        "partitionSelectionMethod": "ALL", 
+        "samplingMethod": "HEAD_SEQUENTIAL", 
+        "targetRatio": 0.02
+      }
+    }, 
+    "exploreUIParams": {}, 
+    "globalSearchQuery": "", 
+    "previewMode": "ALL_ROWS", 
+    "steps": [], 
+    "tags": [], 
+    "vizSampling": {
+      "_refreshTrigger": 0, 
+      "autoRefreshSample": false
+    }
+  }, 
+  "tags": [
+    "Machine Learning", 
+    "Business intelligence"
+  ], 
+  "versionTag": {
+    "lastModifiedBy": {
+      "displayName": "Administrator", 
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1468946105122, 
+    "versionNumber": 12
+  }
+}

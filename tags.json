@@ -1,0 +1,70 @@
+{
+  "tags": {
+    "Revenue !": {
+      "color": "#de3b56"
+    },
+    "Revenue Prediction": {
+      "color": "#28aadd"
+    },
+    "Revenue ?": {
+      "color": "#77bec2"
+    },
+    "Prediction": {
+      "color": "#28aadd"
+    },
+    "Update model": {
+      "color": "#ee874a"
+    },
+    "Regression": {
+      "color": "#de3b56"
+    },
+    "Data processing": {
+      "color": "#28aadd"
+    },
+    "Predictive intelligence": {
+      "color": "#1ac2ab"
+    },
+    "Model assessment": {
+      "color": "#77bec2"
+    },
+    "Business intelligence": {
+      "color": "#77bec2"
+    },
+    "Shared": {
+      "color": "#a088bd"
+    },
+    "Machine Learning": {
+      "color": "#0f6d82"
+    },
+    "sample": {
+      "color": "#2BB2AD"
+    },
+    "sample_project": {
+      "color": "#d66b9b"
+    },
+    "Source data": {
+      "color": "#a088bd"
+    },
+    "Best model": {
+      "color": "#28aadd"
+    },
+    "Features preparation": {
+      "color": "#1ac2ab"
+    },
+    "Processed data": {
+      "color": "#d66b9b"
+    },
+    "Training data": {
+      "color": "#90a8b7"
+    },
+    "Model creation": {
+      "color": "#ee874a"
+    },
+    "SAMPLE_PROJECT": {
+      "color": "#1ac2ab"
+    },
+    "creator_admin": {
+      "color": "#1ac2ab"
+    }
+  }
+}

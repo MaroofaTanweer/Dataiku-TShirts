@@ -1,0 +1,210 @@
+{
+  "checklists": {
+    "checklists": []
+  }, 
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1485788836973, 
+    "versionNumber": 1
+  }, 
+  "listed": true, 
+  "name": "Understanding your customers", 
+  "owner": "admin", 
+  "pages": [
+    {
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 8, 
+              "top": 0, 
+              "width": 4
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "imageId": "fJ9Ca06", 
+            "insightId": "fJ9Ca06", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showLegend": false, 
+              "showTooltips": true, 
+              "showXAxis": true, 
+              "showYAxis": true
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 5, 
+              "top": 0, 
+              "width": 3
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "6P2DAxg", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showLegend": false, 
+              "showTooltips": true, 
+              "showXAxis": true, 
+              "showYAxis": true
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 2, 
+              "top": 4, 
+              "width": 6
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "# the CRM data enriched \u25bc\n\nwith the website usage data (number of pages visited and their IP address)", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 5, 
+              "left": 2, 
+              "top": 5, 
+              "width": 8
+            }, 
+            "clickAction": "OPEN_INSIGHT", 
+            "displayMode": "INSIGHT", 
+            "insightId": "5DYQKBT", 
+            "insightType": "dataset_table", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "showDescription": true, 
+              "showMeaning": false, 
+              "showName": true, 
+              "showProgressBar": false, 
+              "showStorageType": false
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 5, 
+              "top": 2, 
+              "width": 3
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "insightId": "P2j5Nw9", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showLegend": false, 
+              "showTooltips": true, 
+              "showXAxis": true, 
+              "showYAxis": true
+            }, 
+            "tileType": "INSIGHT"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 4, 
+              "left": 0, 
+              "top": 0, 
+              "width": 5
+            }, 
+            "clickAction": "OPEN_INSIGHT", 
+            "displayMode": "INSIGHT", 
+            "insightId": "pjHXPBZ", 
+            "insightType": "chart", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showLegend": true, 
+              "showTooltips": false, 
+              "showXAxis": false, 
+              "showYAxis": false
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Revenue distribution / Country"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 2, 
+              "left": 8, 
+              "top": 2, 
+              "width": 4
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "imageId": "fJ9Ca06", 
+            "insightId": "TiQmd3d", 
+            "insightType": "chart", 
+            "resizeImageMode": "FIT_SIZE", 
+            "showTitle": "YES", 
+            "tileParams": {
+              "showLegend": false, 
+              "showTooltips": true, 
+              "showXAxis": true, 
+              "showYAxis": true
+            }, 
+            "tileType": "INSIGHT", 
+            "title": "Number of pages visited on the company's website"
+          }, 
+          {
+            "autoLoad": true, 
+            "box": {
+              "height": 1, 
+              "left": 10, 
+              "top": 5, 
+              "width": 2
+            }, 
+            "clickAction": "DO_NOTHING", 
+            "displayMode": "INSIGHT", 
+            "resizeImageMode": "ORIG_SIZE", 
+            "showTitle": "NO", 
+            "tileParams": {
+              "isTransparent": true, 
+              "text": "Visit the [flow](/projects/DKU_TSHIRTS/flow/) to see how the enrichment is done", 
+              "textAlign": "CENTER"
+            }, 
+            "tileType": "TEXT"
+          }
+        ]
+      }, 
+      "id": "LBByITO", 
+      "showTitle": false, 
+      "title": "Basic Insights and the enriched dataset"
+    }
+  ], 
+  "showGrid": true, 
+  "tags": [], 
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    }, 
+    "lastModifiedOn": 1486149546575, 
+    "versionNumber": 105
+  }
+}
