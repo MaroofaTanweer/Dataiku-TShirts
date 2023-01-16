@@ -32,11 +32,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1673909216066
+    "lastModifiedOn": 1673909218180
   },
   "creationTag": {
     "versionNumber": 0,
