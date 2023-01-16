@@ -71,7 +71,7 @@
     "users": []
   },
   "tutorialProject": true,
-  "tutorialId": "SAMPLE_TSHIRTS",
+  "tutorialId": "DKU_TSHIRTS",
   "settings": {
     "flowAnchorSourcesAndSinks": true,
     "flowDisplaySettings": {
@@ -186,7 +186,8 @@
     },
     "dkuProperties": []
   },
-  "name": "Predicting Revenue with a TShirt Business",
+  "name": "Dataiku TShirts for Maroofa Tanweer",
+  "projectStatus": "Sandbox",
   "imgPattern": 1,
   "metrics": {
     "probes": [],
@@ -243,11 +244,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 16,
+    "versionNumber": 17,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1673845514987
+    "lastModifiedOn": 1673845518034
   },
   "description": "_This project offers a slightly different look at the Haiku T-Shirt company from the [Tutorials](https://academy.dataiku.com/latest/tutorial/index.html)_\n\n\u003cbr/\u003e\n# Revenue prediction\n\nIn this project you\u0027ll learn how to predict the monthly revenue of new customers once they completed their first purchase.\nThis is done by :\n\n1. Using historical CRM data mixed with users interactions on the web site to build a predictive model,\n2. Updating this model with the most recent data to get the best possible predictions,\n3. Use this up-to-date model to predict how much revenue new customers will generate this month.\n\n\u003cbr/\u003e\n# Visit the sample project\n\n\n1. The Graphical Flow of the data and model processing.\u003cbr/\u003e\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_TSHIRTS/flow/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Flow\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n2. Insights related to customers and revenue prediction.\nNote that some charts requires the installation of the [Reverse Geocoding](https://www.dataiku.com/product/plugins/geoadmin/) plugin.\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_TSHIRTS/dashboards/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Dashboards\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n\n3. Train a predictive model to learn about the key factors impacting revenue.\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_TSHIRTS/analysis/xXTYPWEJ/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Machine learning analysis\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n\n4. Deploy that Machine Learning Model to update it regularly and forecast new customers\u0027 revenue accurately.\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/DKU_TSHIRTS/analysis/gPd2KlKo/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Machine learning models\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n\n\u003cbr/\u003e\n#More on this topic\n\n\n1.  REFERENCE : Understanding DSS visual grammar [http://doc.dataiku.com/dss/latest/flow/index.html?highlight\u003dvisual%20grammar](http://doc.dataiku.com/dss/latest/flow/index.html?highlight\u003dvisual%20grammar)\n2.  VIDEO : 15 minutes to Deploy your Predictive Application : [https://www.dataiku.com/learn/guide/free-training/deploy-predictive-application.html](https://www.dataiku.com/learn/guide/free-training/deploy-predictive-application.html)",
   "shortDesc": "This project offers a slightly different look at the Haiku T-Shirt company from the [Tutorials](https://academy.dataiku.com/latest/tutorial/index.html)",
