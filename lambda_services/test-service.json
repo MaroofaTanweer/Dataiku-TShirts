@@ -16,7 +16,7 @@
       "testQueries": [],
       "enrichMapping": [],
       "healthCheckQueries": [],
-      "returnPostEnrichData": false,
+      "returnPostEnrichData": true,
       "auditPostEnrichData": false,
       "id": "v1",
       "type": "STD_PREDICTION"
@@ -32,11 +32,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1673909218180
+    "lastModifiedOn": 1673963235887
   },
   "creationTag": {
     "versionNumber": 0,
