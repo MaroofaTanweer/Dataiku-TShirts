@@ -5,7 +5,6 @@ pipeline {
     stages {
         stage('PREPARE'){
 			steps {
-                cleanWs()
 				script {
 					sh "echo 'within branch: ${env.BRANCH_NAME}'"
 					if(env.BRANCH_NAME.startsWith('feature_')) {
