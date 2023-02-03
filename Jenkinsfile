@@ -8,29 +8,30 @@ pipeline {
                 cleanWs()
 				script {
 					sh "echo 'within branch: ${env.BRANCH_NAME}'"
-					if (env.BRANCH_NAME == 'master') {
-						BRANCH_TO_TAG=env.BRANCH_NAME.replace('/','%2F')
-						echo 'BRANCH_TO_TAG: ${BRANCH_TO_TAG}'
-						build job: 'Child-Job', wait: false
+					if(env.BRANCH_NAME.startsWith('feature_')) {
+						echo 'within feature block'
+						build job: 'Child-Job',
+						parameters: [
+							string(name: 'jobName', value: 'DEV')
+						],
+						wait: false
+					} else if(env.BRANCH_NAME == 'release') {
+						echo 'within release block'
+						build job: 'Child-Job',
+						parameters: [
+							string(name: 'jobName', value: 'SIT')
+						],
+						wait: false
+					} else if(env.BRANCH_NAME == 'master') {
+						echo 'within master block'
+						build job: 'Child-Job',parameters: [
+							string(name: 'jobName', value: 'PROD')
+						],
+						wait: false
 					} else {
 						echo 'within else block'
 					}
 				}
-            }
-        }
-        stage('PACK_AND_PUB') {
-            steps {
-				sh 'echo PACK_AND_PUB'
-            }
-        }
-        stage('DEV_TEST') {
-            steps {
-                sh 'echo DEV_TEST'
-            }
-        }
-        stage('DEPLOY_TO_PROD') {
-            steps {
-                sh 'echo DEPLOY_TO_PROD'
             }
         }
     }
