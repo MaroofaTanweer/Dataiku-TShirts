@@ -12,20 +12,20 @@ pipeline {
 						echo 'within feature block'
 						build job: 'Child-Job',
 						parameters: [
-							string(name: 'jobName', value: 'DEV')
+							string(name: 'ENV_NAME', value: 'DEV')
 						],
 						wait: false
 					} else if(env.BRANCH_NAME == 'release') {
 						echo 'within release block'
 						build job: 'Child-Job',
 						parameters: [
-							string(name: 'jobName', value: 'SIT')
+							string(name: 'ENV_NAME', value: 'SIT')
 						],
 						wait: false
 					} else if(env.BRANCH_NAME == 'master') {
 						echo 'within master block'
 						build job: 'Child-Job',parameters: [
-							string(name: 'jobName', value: 'PROD')
+							string(name: 'ENV_NAME', value: 'PROD')
 						],
 						wait: false
 					} else {
