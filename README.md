@@ -1,2 +1,2 @@
 # Dataiku-TShirts
-Dataiku TShirts
+Dataiku TShirts Project
