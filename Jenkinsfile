@@ -11,7 +11,7 @@ pipeline {
 						echo 'within feature block'
 						build job: 'Child-Job',
 						parameters: [
-							string(name: 'ENV_NAME', value: 'DEV')
+							string(name: 'ENV_NAME', value: 'DEv')
 						],
 						wait: false
 					} else if(env.BRANCH_NAME == 'release') {
